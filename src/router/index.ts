@@ -1,20 +1,61 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import Home from '../views/Home.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: () => import('../views/Home.vue')
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+    path: '/news',
+    name: 'News',
+    component: () => import('../views/News.vue')
+  },
+  {
+    path: '/leadership',
+    name: 'Leadership',
+    component: () => import('../views/Leadership.vue')
+  },
+  {
+    path: '/training',
+    name: 'Training',
+    component: () => import('../views/Training.vue')
+  },
+  {
+    path: '/result',
+    name: 'Result',
+    component: () => import('../views/Result.vue')
+  },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: () => import('../views/Contact.vue')
+  },
+  {
+    path: '/forschool',
+    name: 'Forschool',
+    component: () => import('../views/Forschool.vue')
+  },
+  {
+    path: '/graph',
+    name: 'Graph',
+    component: () => import('../views/Graph.vue')
+  },
+  {
+    path: '/system',
+    name: 'System',
+    component: () => import('../views/System.vue')
+  },
+  {
+    path: '/ads',
+    name: 'Adsvertising',
+    component: () => import('../views/Ads.vue')
+  },
+  {
+    path: '/normative',
+    name: 'Normative act',
+    component: () => import('../views/Normative.vue')
+  },
 ]
 
 const router = createRouter({

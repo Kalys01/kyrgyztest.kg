@@ -1,17 +1,21 @@
 <template>
   <div class="">
     <TheHeader />
-    <router-view/>
+    <main>
+      <AppLayout />
+    </main>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import TheHeader from '@/components/TheHeader.vue'
+import AppLayout from '@/layouts/AppLayout.vue'
 
 export default defineComponent({
   components: {
-    TheHeader
+    TheHeader,
+    AppLayout
   }
 
 })

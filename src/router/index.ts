@@ -9,7 +9,8 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/news',
     name: 'News',
-    component: () => import('../views/News.vue')
+    component: () => import('../views/News.vue'),
+    meta: {layout: 'AppLayoutNews'}
   },
   {
     path: '/leadership',

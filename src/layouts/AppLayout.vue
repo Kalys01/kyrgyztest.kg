@@ -24,8 +24,11 @@ export default defineComponent({
           layout.value = markRaw(AppLayoutDefault)
         }
       },
-      { immediate: true }
+      {
+        immediate: true
+      }
     )
+    
     return { layout }
   }
   

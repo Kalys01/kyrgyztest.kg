@@ -18,22 +18,22 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/training',
-    name: 'Training',
+    name: 'Training tests',
     component: () => import('../views/Training.vue')
   },
   {
     path: '/result',
-    name: 'Result',
+    name: 'Test results',
     component: () => import('../views/Result.vue')
   },
   {
     path: '/contact',
-    name: 'Contact',
+    name: 'Contacts',
     component: () => import('../views/Contact.vue')
   },
   {
     path: '/forschool',
-    name: 'Forschool',
+    name: 'For school',
     component: () => import('../views/Forschool.vue')
   },
   {
@@ -43,7 +43,7 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/system',
-    name: 'System',
+    name: 'Systems Kyrgyztest',
     component: () => import('../views/System.vue')
   },
   {

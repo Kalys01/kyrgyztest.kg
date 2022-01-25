@@ -38,13 +38,17 @@
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
               <a href="#" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Главная</a>
 
-              <a
-                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium cursor-pointer"
-                v-for="(nav, index) in navs" :key="index"
-                :to="nav.to"
-              >
-                {{nav.title}}
-              </a>
+              <ul class="flex items-center">
+                <li>
+                  <router-link
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium cursor-pointer"
+                    v-for="(nav, index) in navs" :key="index"
+                    :to="nav.to"
+                  >
+                    {{nav.title}}
+                  </router-link>
+                </li>
+              </ul>
 
               
             </div>

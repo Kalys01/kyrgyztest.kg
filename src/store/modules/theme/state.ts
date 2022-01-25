@@ -1,7 +1,7 @@
 export type State = {
-  theme: object;
+  theme: string;
 };
 
 export const state: State = {
-  theme: {},
+  theme: '',
 };

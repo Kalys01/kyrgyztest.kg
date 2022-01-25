@@ -11,25 +11,26 @@
     <div class="flex">
       Пн-Пт. 9:00 - 17:30
     </div>
-    <!-- <TheToggleTheme /> -->
+    <TheToggleTheme />
     
   </div>
 </template>
 
 <script lang="ts">
 import NavUp from '@/models/ModelNavUp'
-// import TheToggleTheme from './TheToggleTheme.vue'
+import TheToggleTheme from './TheToggleTheme.vue'
 import { computed, defineComponent, onBeforeMount, onMounted, watch } from 'vue'
-// import { useStore } from '@/store'
-// import { ActionTypes } from '@/store/modules/action-types'
+import { useStore } from '@/store'
+import { ActionTypes } from '@/store/modules/action-types'
 import { mapGetters } from 'vuex'
 
 export default defineComponent({
+  name: 'HeaderUpNav',
   components: {
-    // TheToggleTheme
+    TheToggleTheme
   },
   setup() {
-    // const store = useStore()
+    const store = useStore()
 
     const navups = <NavUp[]>([
       {title: 'Нормативные акты', to: '/normative'},
@@ -39,8 +40,9 @@ export default defineComponent({
       {title: 'Объявления', to: '/ads'}
     ])
 
-    // onBeforeMount: (() => store.dispatch(ActionTypes.GET_THEME))
-    // const theme = computed(() => store.getters.GET_THEME)
+    onBeforeMount: (() => store.dispatch(ActionTypes.GET_THEME))
+    const theme = computed(() => store.getters.GET_THEME)
+    
 
     return { navups }
   },

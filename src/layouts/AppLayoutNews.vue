@@ -1,7 +1,6 @@
 <template>
-  <div class="bg-gray-600">
+  <div class="bg-white ">
     <slot />
-    <h1>news page</h1>
   </div>
 </template>
 

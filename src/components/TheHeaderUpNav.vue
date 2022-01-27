@@ -1,18 +1,21 @@
 <template>
-  <div class="top-0 flex justify-between px-9 items-center w-full bg-gray-900 text-gray-200 dark:bg-gray-200 dark:text-gray-900">
+  <div class="top-0 flex justify-between px-9 items-center w-full bg-gray-900 text-gray-200">
     <ul class="flex justify-around font-semibold py-2 ">
       <li
         class="mr-5"
         v-for="(navup, index) in navups"
         :key="index">
-        <router-link :to="navup.to">{{navup.title}}</router-link>
+        <router-link :to="navup.to">
+          {{navup.title}}
+        </router-link>
       </li>
     </ul>
     <div class="flex">
       Пн-Пт. 9:00 - 17:30
     </div>
-    <TheToggleTheme />
-    
+    <div class="">
+      <TheToggleTheme />
+    </div>
   </div>
 </template>
 
@@ -22,7 +25,6 @@ import TheToggleTheme from './TheToggleTheme.vue'
 import { computed, defineComponent, onBeforeMount, onMounted, watch } from 'vue'
 import { useStore } from '@/store'
 import { ActionTypes } from '@/store/modules/action-types'
-import { mapGetters } from 'vuex'
 
 export default defineComponent({
   name: 'HeaderUpNav',
@@ -40,21 +42,19 @@ export default defineComponent({
       {title: 'Объявления', to: '/ads'}
     ])
 
-    onBeforeMount: (() => store.dispatch(ActionTypes.GET_THEME))
-    const theme = computed(() => store.getters.GET_THEME)
-    
+    onBeforeMount: (() => store.dispatch(ActionTypes.INIT_THEME))
 
-    return { navups }
+    const theme = computed(() => store.getters.GET_THEME)
+
+    watch(theme, (newTheme, oldTheme) => {
+      const addTheme = document.querySelector('html') as HTMLElement
+      newTheme === 'light'
+        ? addTheme.classList.remove('dark')
+        : addTheme.classList.add('dark')
+    })
+
+    return { navups,  }
   },
-  
-  // watch: {
-  //   theme(newTheme) {
-  //     const addTheme = document.querySelector('html') as HTMLElement
-  //     newTheme === 'light'
-  //       ? addTheme.classList.remove('dark')
-  //       : addTheme.classList.add('dark')
-  //   }
-  // }
 })
 </script>
 

@@ -12,15 +12,17 @@ type ActionAugments = Omit<ActionContext<State, State>, 'commit'> & {
 }
 
 export type Actions = {
-  [ActionTypes.GET_THEME](context: ActionAugments): void;
+  [ActionTypes.INIT_THEME](context: ActionAugments): void;
 }
 
 export const actions: ActionTree<State, State> & Actions = {
-  async [ActionTypes.GET_THEME]({ commit }) {
+  [ActionTypes.INIT_THEME]({ commit }) {
     const cachedTheme: boolean = localStorage.theme ? localStorage.theme : false;
     return cachedTheme ? commit(MutationTypes.SET_THEME, cachedTheme) : commit(MutationTypes.SET_THEME, 'light');
   },
+  
   [ActionTypes.toggle_theme]({ commit }) {
+
     switch (localStorage.theme) {
       case 'light':
         commit('SET_THEME', 'dark')

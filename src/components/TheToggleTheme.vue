@@ -1,7 +1,7 @@
 <template>
   <button
     @click="toggleTheme"
-    class="text-gray-300 cursor-pointer pt-1 dark:text-black md:mx-4 h-5 w-5"
+    class="text-gray-300 cursor-pointer pt-1 md:mx-4 h-5 w-5"
   >
     <svg
       aria-hidden="true"

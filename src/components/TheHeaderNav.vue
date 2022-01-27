@@ -1,5 +1,5 @@
 <template>
-  <nav class="bg-gray-800">
+  <nav class="bg-gray-300 text-gray-900 dark:bg-gray-900 dark:text-white">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex items-center justify-between h-16">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -60,7 +60,7 @@
           <div class="ml-3 relative">
             <div>
               <div class="flex text-white">
-                <span>kyr | rus</span>
+                <span>кыр | рус</span>
               </div>
             </div>
           </div>

@@ -39,6 +39,7 @@ export default defineComponent({
       {title: 'Выпускникам школ', to: '/forschool'},
       {title: 'Система Кыргызтест', to: '/system'},
       {title: 'График проведения теста', to: '/graph'},
+      {title: 'Тренировочные тесты', to: '/training'},
       {title: 'Объявления', to: '/ads'}
     ])
 
@@ -48,12 +49,13 @@ export default defineComponent({
 
     watch(theme, (newTheme, oldTheme) => {
       const addTheme = document.querySelector('html') as HTMLElement
+      
       newTheme === 'light'
         ? addTheme.classList.remove('dark')
         : addTheme.classList.add('dark')
     })
 
-    return { navups,  }
+    return { navups }
   },
 })
 </script>

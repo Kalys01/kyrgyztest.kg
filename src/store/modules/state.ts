@@ -3,5 +3,5 @@ export type State = {
 };
 
 export const state: State = {
-  theme: '',
+  theme: 'light',
 };

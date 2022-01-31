@@ -18,8 +18,18 @@ export type Actions = {
 export const actions: ActionTree<State, State> & Actions = {
   [ActionTypes.INIT_THEME]({ commit }) {
     const cachedTheme: boolean = localStorage.theme ? localStorage.theme : false;
-    return cachedTheme ? commit(MutationTypes.SET_THEME, cachedTheme) : commit(MutationTypes.SET_THEME, 'light');
+
+    const userPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if(cachedTheme) {
+      commit(MutationTypes.SET_THEME, cachedTheme)
+    } else if(userPrefersDark) {
+      commit(MutationTypes.SET_THEME, 'dark')
+    } else {
+      commit(MutationTypes.SET_THEME, 'light')
+    }
   },
+
   
   [ActionTypes.toggle_theme]({ commit }) {
 

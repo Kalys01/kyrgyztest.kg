@@ -1,5 +1,5 @@
 <template>
-  <nav class="bg-gray-300 text-gray-900 dark:bg-gray-900 dark:text-white">
+  <nav class="bg-blue-900 text-gray-900 sticky top-0">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex items-center justify-between h-16">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -36,7 +36,7 @@
           <div class="hidden sm:block sm:ml-6">
             <div class="flex space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <a href="#" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Главная</a>
+              <router-link to="/" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Главная</router-link>
 
               <ul class="flex items-center">
                 <li>
@@ -86,7 +86,6 @@ export default defineComponent({
     const navs = <Nav[]>([
       {title: 'Новости', to: '/news'},
       {title: 'Руководство', to: '/leadership'},
-      {title: 'Тренировочные тесты', to: '/training'},
       {title: 'Результаты тестов', to: '/result'},
       {title: 'Контакты', to: '/contact'}
     ])

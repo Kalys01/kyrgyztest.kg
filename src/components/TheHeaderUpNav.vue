@@ -48,7 +48,7 @@ export default defineComponent({
     const theme = computed(() => store.getters.GET_THEME)
 
     watch(theme, (newTheme, oldTheme) => {
-      const addTheme = document.querySelector('html') as HTMLElement
+      const addTheme = document.querySelector('body') as HTMLElement
       
       newTheme === 'light'
         ? addTheme.classList.remove('dark')

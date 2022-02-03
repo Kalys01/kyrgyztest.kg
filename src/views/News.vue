@@ -1,13 +1,17 @@
 <template>
   <div class="">
-    <h1>This is an new page</h1>
+    <TheNews />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import TheNews from '@/components/TheNews.vue'
 
 export default defineComponent({
+  components: {
+    TheNews
+  }
 
 })
 </script>

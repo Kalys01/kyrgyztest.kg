@@ -19,25 +19,19 @@
   }
   .timeline {
     @apply
-      border-l-4 border-gray-200
+      border-l-2 border-gray-300
       ml-3 mt-3 py-16
       space-y-14
   }
-  .dot {
-    @apply
-      absolute top-1 -left-3.5
-      bg-blue-400
-      h-6 w-6
-      rounded-full
-      border-4 border-white
-  }
+ 
   .timeline-title {
     @apply
-      text-3xl text-gray-600 font-semibold
+      text-3xl font-semibold
       tracking-wide mb-2
   }
   .timedate {
     @apply
       -ml-40 absolute mt-1
+      text-gray-300
   }
 }

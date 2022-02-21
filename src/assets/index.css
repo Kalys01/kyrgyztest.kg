@@ -14,7 +14,7 @@
   .group-date {
     @apply
       text-4xl text-gray-300
-      px-3 py-4
+      px-3 py-2
       font-bold tracking-widest
   }
   .timeline {

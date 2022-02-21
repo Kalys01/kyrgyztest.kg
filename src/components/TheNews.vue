@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col items-center justify-center max-w-7xl mx-auto px-2 relative">
     <section class="w-10/12 -mr-32">
-      <div class="sticky top-0 bg-white py-3 z-20 rounded-md shadow-xl shadow-white -ml-32 bg-opacity-70 backdrop-filter backdrop-blur-lg">
+      <div class="sticky top-0 bg-white py-0 z-20 rounded-md shadow-xl shadow-white -ml-32 bg-opacity-70 backdrop-filter backdrop-blur-lg">
         <h2 class="group-date uppercase">2022</h2>
       </div>
       <div class="timeline">
@@ -79,7 +79,7 @@
     </section>
 
     <section class="w-10/12 -mr-32">
-      <div class="sticky top-0 bg-white py-3 z-20 rounded-md shadow-xl shadow-white -ml-32 bg-opacity-70 backdrop-filter backdrop-blur-lg">
+      <div class="sticky top-0 bg-white z-20 rounded-md shadow-xl shadow-white -ml-32 bg-opacity-70 backdrop-filter backdrop-blur-lg">
         <h2 class="group-date uppercase">2021</h2>
       </div>
       <div class="timeline">

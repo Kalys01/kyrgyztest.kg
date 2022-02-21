@@ -22,5 +22,11 @@ export default defineComponent({
 </script>
 
 <style>
-
+.router-link-active {
+  color: rgb(255, 255, 255);
+}
+.router-link-exact-active {
+  border-bottom: 3px solid orange;
+  /* transition-duration: .5s; */
+}
 </style>

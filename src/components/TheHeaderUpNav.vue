@@ -1,20 +1,41 @@
 <template>
-  <div class="top-0 flex justify-between px-9 items-center w-full bg-gray-900 text-gray-200">
-    <ul class="flex justify-around font-semibold py-2 ">
-      <li
-        class="mr-5"
-        v-for="(navup, index) in navups"
-        :key="index">
-        <router-link :to="navup.to">
-          {{navup.title}}
-        </router-link>
-      </li>
-    </ul>
-    <div class="flex">
-      Пн-Пт. 9:00 - 17:30
-    </div>
-    <div class="">
-      <TheToggleTheme />
+  <div class="top-0 flex lg:justify-center justify-end items-center w-full py-1 lg:px-1 bg-gray-900 text-gray-300">
+    <div class="flex justify-between w-full text-xs md:text-sm lg:justify-around lg:gap-4 xl:gap-16">
+      <ul class="hidden lg:flex justify-around font-semibold py-2 text-xs xl:text-sm">
+        <li
+          class="xl:mx-3"
+          v-for="(navup, index) in navups"
+          :key="index">
+          <router-link
+            :to="navup.to"
+            class="text-gray-300 px-3 py-2 rounded-sm"
+          >
+            {{navup.title}}
+          </router-link>
+        </li>
+      </ul>
+      <div class="flex items-center mx-5 sm:mr-20 lg:hidden">
+        <div class="cursor-pointer border-2 border-white rounded-md">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+          </svg>
+        </div>
+        <div class="mx-3 flex sm:hidden">
+          LOGO
+        </div>
+      </div>
+    
+      <div class="hidden items-center sm:flex lg:hidden 2xl:flex">
+        Пн-Пт. 9:00 - 17:30
+      </div>
+      <div class="flex mx-5 lg:mx-0">
+        <div class="lg:hidden flex items-center">
+          <MultiLanguage />
+        </div>
+        <div class="flex items-center right-0 py-1">
+          <TheToggleTheme />
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -22,6 +43,7 @@
 <script lang="ts">
 import NavUp from '@/models/ModelNavUp'
 import TheToggleTheme from './TheToggleTheme.vue'
+import MultiLanguage from './MultiLanguage.vue'
 import { computed, defineComponent, onBeforeMount, onMounted, watch } from 'vue'
 import { useStore } from '@/store'
 import { ActionTypes } from '@/store/modules/action-types'
@@ -29,7 +51,8 @@ import { ActionTypes } from '@/store/modules/action-types'
 export default defineComponent({
   name: 'HeaderUpNav',
   components: {
-    TheToggleTheme
+    TheToggleTheme,
+    MultiLanguage
   },
   setup() {
     const store = useStore()

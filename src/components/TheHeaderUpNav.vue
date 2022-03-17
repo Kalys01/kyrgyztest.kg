@@ -8,7 +8,7 @@
           :key="index">
           <router-link
             :to="navup.to"
-            class="text-gray-300 px-3 py-2 rounded-sm"
+            class="text-gray-300 px-3 py-2 rounded-sm hover:border-b-2 hover:border-white"
           >
             {{navup.title}}
           </router-link>
@@ -20,12 +20,12 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
           </svg>
         </div>
-        <div class="mx-3 flex sm:hidden">
+        <div class="mx-3 flex xs:hidden">
           LOGO
         </div>
       </div>
     
-      <div class="hidden items-center sm:flex lg:hidden 2xl:flex">
+      <div class="hidden items-center 2xl:flex">
         Пн-Пт. 9:00 - 17:30
       </div>
       <div class="flex mx-5 lg:mx-0">

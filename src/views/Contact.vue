@@ -1,18 +1,32 @@
 <template>
-  <div class="min-h-screen w-full ">
-    <div class="w-1/2 h-screen bg-gray-900 flex items-center dark:bg-white  transition duration-500">
-      <div class="absolute w-[500px] h-[300px] bg-opacity-0 backdrop-filter backdrop-blur-lg shadow-xl right-0"></div>
+  <div class="flex justify-center">
+    <div class=" min-h-screen w-full max-w-screen-xl bg-gray-400">
+      <div class="w-full h-full p-10 bg-blue-400 flex justify-end items-center">
+        <div class="bg-white w-[calc(100%-200px)] right-0 h-[500px] relative rounded-md">
+          <ContactsMap />
+          <ContactsInfo />
+        </div>
+      </div>
     </div>
-    <div class="w-1/2 absolute right-0 max-h-screen bg-white dark:bg-gray-900 transition duration-500"></div>
-    
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import ContactsInfo from '@/components/TheContactsInfo.vue'
+import ContactsMap from '@/components/TheContactsMap.vue'
 
 export default defineComponent({
+  components: {
+    ContactsInfo,
+    ContactsMap
+  }
 
 })
 </script>
 
+<style scoped>
+.high {
+  min-height: calc("100vh - 150px");
+}
+</style>

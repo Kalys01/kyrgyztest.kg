@@ -1,11 +1,9 @@
 <template>
   <div class="flex justify-center">
     <div class="w-full max-w-screen-xl bg-gray-400">
-      <div class="w-full px-10 bg-blue-400 flex justify-end items-center py-20">
-        <div class="bg-white w-[calc(100%-200px)] right-0 h-[500px] relative rounded-md">
-          <ContactsMap />
-          <ContactsInfo />
-        </div>
+      <div class="w-full px-3 lg:px-10 bg-[#212121] flex justify-end items-center py-20 relative">
+        <ContactsMap />
+        <ContactsInfo />
       </div>
     </div>
   </div>

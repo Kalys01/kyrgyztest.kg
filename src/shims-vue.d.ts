@@ -4,3 +4,8 @@ declare module '*.vue' {
   const component: DefineComponent<{}, {}, any>
   export default component
 }
+
+declare module 'vueperslides' {
+  class VueperSlides extends DefineComponent {}
+  class VueperSlide extends DefineComponent {}
+}

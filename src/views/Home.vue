@@ -1,5 +1,6 @@
 <template>
   <div class="w-full max-w-7xl mx-auto px-2">
+    <TheCarousel />
     <div class="grid grid-cols-3 gap-4 justify-center mt-10">
       <div class="flex justify-center flex-wrap text-center p-10 mt-5 rounded-2xl shadow-xl bg-gray-50">
         <h1 class="text-xl font-bold mb-2 uppercase">Көңүл бургула!</h1>
@@ -54,11 +55,13 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import TheStatistics from '@/components/TheStatistics.vue'
+import TheCarousel from '@/components/TheCarousel.vue'
 
 export default defineComponent({
   name: 'Home',
   components: {
-    TheStatistics
+    TheStatistics,
+    TheCarousel
   },
   setup() {
 

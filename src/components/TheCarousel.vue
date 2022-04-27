@@ -1,20 +1,23 @@
 <template>
-  <vueper-slides
-    class="no-shadow"
-    :arrows="true"
-    :visible-slides="1"
-    :dragging-distance="50"
-    :slideMultiple="true"
-    :arrows-outside="false"
-    :infinite="false"
-    :autoplay="true"
-  >
-  <vueper-slide
-    v-for="i in 3"
-    :key="i"
-    :title="i.toString()"
-  ></vueper-slide>
+  <div class="mt-10 rounded-2xl overflow-hidden">
+    <vueper-slides
+      :arrows="true"
+      :visible-slides="1"
+      :dragging-distance="50"
+      :slideMultiple="true"
+      :arrows-outside="false"
+      :infinite="false"
+      :autoplay="true"
+    >
+      <vueper-slide
+        class="bg-yellow-400 text-red-500 text-right"
+        v-for="i in 3"
+        :key="i"
+        :title="i.toString()"
+      >
+      </vueper-slide>
     </vueper-slides>
+  </div>
 </template>
 
 <script lang="ts">
@@ -40,9 +43,9 @@ export default defineComponent({
   background-color: #119c38;
 } */
 
-.vueperslide {
+/* .vueperslide {
   background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
-}
+} */
 /* .vueperslide:nth-of-type(1) {
   width: 100% !important;
 }

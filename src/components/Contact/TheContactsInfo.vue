@@ -1,5 +1,5 @@
 <template>
-	<div class="absolute flex items-center flex-col w-[300px] lg:w-[360px] h-[300px] sm:h-[430px] left-[calc(50%-150px)] sm:left-3 lg:left-10 top-5 sm:top-28 text-gray-300 z-10 bg-black/20 rounded-md backdrop-filter backdrop-blur-lg shadow-2xl">
+	<div class="absolute flex items-center flex-col w-[300px] lg:w-[360px] h-[300px] sm:h-[430px] left-[calc(50%-150px)] sm:left-3 lg:left-10 top-7 sm:top-28 text-gray-300 z-10 bg-black/20 rounded-md backdrop-filter backdrop-blur-lg shadow-2xl">
 		<h1 class="text-2xl m-3">Контакные данные</h1>
 		<div class="flex flex-col w-full h-full p-2 lg:p-4 text-xs lg:text-sm justify-around">
 			

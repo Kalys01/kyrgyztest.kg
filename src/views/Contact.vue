@@ -1,11 +1,7 @@
 <template>
-  <div class="flex justify-center">
-    <div class="w-full max-w-screen-xl bg-gray-400">
-      <div class="w-full px-3 lg:px-10 bg-[#212121] flex justify-end items-center pt-24 pb-7 sm:py-20 relative">
-        <ContactsMap />
-        <ContactsInfo />
-      </div>
-    </div>
+  <div class="w-full px-3 lg:px-10 bg-[#212121] flex justify-end items-center pt-24 pb-7 sm:py-20 relative">
+    <ContactsMap />
+    <ContactsInfo />
   </div>
 </template>
 

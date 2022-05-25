@@ -51,7 +51,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import TheStatistics from '@/components/TheStatistics.vue'
+import TheStatistics from '@/components/Statistics/TheStatistics.vue'
 import TheCarousel from '@/components/TheCarousel.vue'
 
 export default defineComponent({

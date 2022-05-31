@@ -21,19 +21,17 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import { VueperSlides, VueperSlide } from 'vueperslides'
- import'vueperslides/dist/vueperslides.css'
+import { defineComponent } from "vue";
+import { VueperSlides, VueperSlide } from "vueperslides";
+import "vueperslides/dist/vueperslides.css";
 
 export default defineComponent({
   components: {
     VueperSlides,
-    VueperSlide
+    VueperSlide,
   },
-  setup() {
-    
-  },
-})
+  setup() {},
+});
 </script>
 
 <style scoped>
@@ -73,6 +71,4 @@ export default defineComponent({
   z-index: 10;
   font: 12px Tahoma, Geneva, sans-serif;
 } */
-
-
 </style>

@@ -1,13 +1,14 @@
 <template>
-  <div class="">
-    <h1>This is an training page</h1>
-  </div>
+  <Suspense>
+    <template #default>
+      <Users />
+    </template>
+    <template #fallback>
+      <div class="flex justify-center items-center">Loading...</div>
+    </template>
+  </Suspense>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-
-})
+<script lang="ts" setup>
+import Users from '@/components/Users'
 </script>

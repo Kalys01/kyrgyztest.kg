@@ -1,14 +1,19 @@
 <template>
-  <div class="sm:hidden" id="mobile-menu">
-    <div class="px-2 pt-2 pb-3 space-y-1">
-      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-      <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Dashboard</a>
-
-      <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
-
-      <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
-
-      <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Calendar</a>
-    </div>
+  <div class="flex flex-col lg:hidden w-[300px] h-[100%] px-5 py-20 xs:py-10 text-gray-300 bg-black z-30 fixed bg-opacity-50 backdrop-filter backdrop-blur-lg">
+    <ul
+      class="w-full h-full"
+      v-for="(navup, id) in navups"
+      :key="id"
+    >
+      <li>{{navup.title}}</li>
+    </ul>
   </div>
 </template>
+
+<script lang="ts" setup>
+import { useStore } from '@/store'
+
+const store = useStore()
+const navups = store.getters.GET_NAVUPS
+console.log(navups)
+</script>

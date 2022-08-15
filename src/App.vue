@@ -1,9 +1,8 @@
 <template>
-  <div class="">
+  <div>
+    <TheMobileSidebar />
     <TheHeader />
-    <main>
-      <AppLayout />
-    </main>
+    <AppLayout />
   </div>
 </template>
 
@@ -11,11 +10,13 @@
 import { defineComponent } from 'vue';
 import TheHeader from '@/components/TheHeader.vue'
 import AppLayout from '@/layouts/AppLayout.vue'
+import TheMobileSidebar from '@/components/TheMobileSidebar.vue'
 
 export default defineComponent({
   components: {
     TheHeader,
-    AppLayout
+    AppLayout,
+    TheMobileSidebar
   }
 
 })

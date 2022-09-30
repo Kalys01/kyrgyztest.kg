@@ -17,8 +17,8 @@ export type Actions = {
 
 export const actions: ActionTree<State, State> & Actions = {
   [ActionTypes.INIT_THEME]({ commit }) {
-    const cachedTheme: boolean = localStorage.theme ? localStorage.theme : false;
 
+    const cachedTheme: boolean = localStorage.theme ? localStorage.theme : false;
     const userPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
     if(cachedTheme) {
@@ -42,5 +42,11 @@ export const actions: ActionTree<State, State> & Actions = {
         commit('SET_THEME', 'light')
         break;
     }
+  },
+
+  [ActionTypes.toggle_sidebar]({ commit }) {
+
+    let sidebar = !MutationTypes.SET_SHOWSIDEBAR ? true : false;
+    commit(MutationTypes.SET_SHOWSIDEBAR, sidebar)
   }
 }

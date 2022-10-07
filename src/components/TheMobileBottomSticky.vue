@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full flex items-center h-16 z-50 fixed bottom-0 bg-black/50 rounded-t-md backdrop-filter backdrop-blur-lg shadow-xl">
+  <div class="w-full flex items-center h-16 z-30 fixed bottom-0 bg-black/50 rounded-t-lg backdrop-filter backdrop-blur-lg shadow-xl">
     <ul class="w-full flex justify-around text-gray-400">
 
       <router-link to="/">

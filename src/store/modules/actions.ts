@@ -44,9 +44,7 @@ export const actions: ActionTree<State, State> & Actions = {
     }
   },
 
-  [ActionTypes.toggle_sidebar]({ commit }) {
-
-    let sidebar = !MutationTypes.SET_SHOWSIDEBAR ? true : false;
-    commit(MutationTypes.SET_SHOWSIDEBAR, sidebar)
+  [ActionTypes.open_sidebar]({ commit }, payload: boolean) {
+    commit(MutationTypes.SET_SHOWSIDEBAR, payload)
   }
 }

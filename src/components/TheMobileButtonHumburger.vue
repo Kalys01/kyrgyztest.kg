@@ -1,5 +1,5 @@
 <template>
-  <button class="cursor-pointer border-2 border-white rounded-md" @click="toggleSidebar">
+  <button class="cursor-pointer border-2 border-white rounded-md" @click="openSidebar">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       class="h-5 w-5"
@@ -18,20 +18,20 @@
 </template>
 
 <script lang="ts">
-import { ActionTypes } from "@/store/modules/action-types";
+import { MutationTypes } from "@/store/modules/mutation-types";
 import { defineComponent } from "vue";
-import { useStore } from "vuex";
+import { useStore } from "@/store";
 
 export default defineComponent({
-  name: "toggleSidebar",
+  name: "openSidebar",
   setup() {
     const store = useStore();
 
-    const toggleSidebar = () => {
-      store.dispatch(ActionTypes.toggle_sidebar);
+    const openSidebar = () => {
+      store.commit(MutationTypes.SET_SHOWSIDEBAR, true);
     };
 
-    return { toggleSidebar };
+    return { openSidebar };
   },
 });
 </script>

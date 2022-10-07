@@ -13,6 +13,6 @@ export const mutations: MutationTree<State> & Mutations = {
     localStorage.theme = payload
   },
   [MutationTypes.SET_SHOWSIDEBAR](state: State, payload: boolean) {
-    state.showSidebar = !state.showSidebar
+    state.showSidebar = payload
   },
 }

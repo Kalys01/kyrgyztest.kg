@@ -8,8 +8,8 @@
       <ul class="hidden lg:flex justify-around font-semibold py-2 text-xs xl:text-sm">
         <li class="xl:mx-3" v-for="(navup, index) in navups" :key="index">
           <router-link
-            :to="navup.to"
             class="text-gray-300 px-3 py-2 rounded-sm hover:border-b-2 hover:border-white"
+            :to="navup.to"
           >
             {{ navup.title }}
           </router-link>
@@ -31,6 +31,11 @@
       </div>
     </div>
   </div>
+  <TheMobileSidebarOverlay
+    class="ease-in-out transition-all duration-500"
+    v-show="isShowSidebar"
+    @click="closeSidebar"
+  />
   <TheMobileSidebar />
 </template>
 
@@ -39,8 +44,10 @@ import NavUp from "@/models/ModelNavUp";
 import TheMobileButtonHumburger from "./TheMobileButtonHumburger.vue";
 import TheToggleTheme from "./TheToggleTheme.vue";
 import TheMobileSidebar from "./TheMobileSidebar.vue";
+import TheMobileSidebarOverlay from "./TheMobileSidebarOverlay.vue";
 import MultiLanguage from "./MultiLanguage.vue";
-import { computed, defineComponent, onBeforeMount, onMounted, watch } from "vue";
+import { computed, defineComponent, onBeforeMount, watch } from "vue";
+import { MutationTypes } from "@/store/modules/mutation-types";
 import { useStore } from "@/store";
 import { ActionTypes } from "@/store/modules/action-types";
 
@@ -51,6 +58,7 @@ export default defineComponent({
     MultiLanguage,
     TheMobileButtonHumburger,
     TheMobileSidebar,
+    TheMobileSidebarOverlay
   },
   setup() {
     const store = useStore();
@@ -69,7 +77,16 @@ export default defineComponent({
         : addTheme.classList.add("dark");
     });
 
-    return { navups };
-  },
+    const isShowSidebar = computed(() => store.getters.GET_SHOWSIDEBAR);
+    const closeSidebar = () => {
+      store.commit(MutationTypes.SET_SHOWSIDEBAR, false);
+    };
+
+    return {
+      navups,
+      closeSidebar,
+      isShowSidebar
+    };
+  }
 });
 </script>

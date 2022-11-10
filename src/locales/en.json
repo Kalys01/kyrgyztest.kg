@@ -1,3 +1,17 @@
 {
-  "messages": "the world!"
+  "header": {
+    "title": "Kyrgyztest",
+    "main": "Home",
+    "news": "News",
+    "results": "Results",
+    "contacts": "Contacts"
+  },
+  "results": {
+    "title" : "Test results",
+    "placeholder": "Personal number",
+    "level": "Level",
+    "subtests": "Subtests",
+    "ball": "Ball",
+    "time": "Time"
+  }
 }

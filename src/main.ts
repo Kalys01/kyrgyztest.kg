@@ -9,9 +9,11 @@ import { messages, defaultLocale } from './locales'
 
 type MessageSchema = typeof ru
 
+const LocalStorageLang = localStorage.getItem('lang')
+
 const i18n = createI18n<[MessageSchema], 'ru' | 'en'>({
     messages,
-    locale: defaultLocale,
+    locale: LocalStorageLang || defaultLocale,
     fallbackLocale: defaultLocale,
     legacy: false
   })

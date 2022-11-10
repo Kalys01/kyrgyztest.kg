@@ -1,10 +1,11 @@
 import NavUp from "@/models/ModelNavUp";
-import { reactive } from "vue";
+import { defaultLocale } from '@/locales'
 
 export type State = {
   theme: string;
   navUps: NavUp[];
   showSidebar: boolean;
+  lang: string;
 };
 
 export const state: State = {
@@ -17,5 +18,6 @@ export const state: State = {
     {title: 'Тренировочные тесты', to: '/training'},
     {title: 'Объявления', to: '/ads'}
   ],
-  showSidebar: false
+  showSidebar: false,
+  lang: defaultLocale
 };

@@ -12,7 +12,13 @@ export const mutations: MutationTree<State> & Mutations = {
     state.theme = payload,
     localStorage.theme = payload
   },
+  
   [MutationTypes.SET_SHOWSIDEBAR](state: State, payload: boolean) {
     state.showSidebar = payload
   },
+
+  [MutationTypes.SET_LANG](state: State, payload: string) {
+    state.lang = payload
+    localStorage.lang = payload
+  }
 }

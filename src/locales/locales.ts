@@ -4,6 +4,6 @@ export enum Locales {
 }
 
 export const LOCALES = [
-    {value: Locales.RU, caption: 'Russian'},
-    {value: Locales.EN, caption: 'English'}
+    {value: Locales.RU, caption: 'РУС'},
+    {value: Locales.EN, caption: 'ENG'}
 ]

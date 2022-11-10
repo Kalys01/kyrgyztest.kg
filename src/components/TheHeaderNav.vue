@@ -6,7 +6,7 @@
           <div class="flex text-gray-300 items-center ml-2 md:mx-3 lg:mx-0">
             <div class="mr-2 sm:mr-5">LOGO</div>
             <div class="hidden sm:flex">
-              <h1 class="uppercase text-md cursor-pointer md:text-xl">Кыргызтест</h1>
+              <h1 class="uppercase text-md cursor-pointer md:text-xl">{{$t('messages')}}</h1>
             </div>
           </div>
           <div class="flex text-xs md:ml-6 md:text-sm xl:text-md">
@@ -24,7 +24,7 @@
         </div>
 
         <!-- Language change -->
-        <div class="hidden lg:flex items-center absolute inset-y-0 right-0 pr-2">
+        <div class="hidden lg:flex items-center absolute right-0">
           <MultiLanguage />
         </div>
       </div>
@@ -49,7 +49,7 @@ export default defineComponent({
       { title: "Результаты тестов", to: "/result" },
       { title: "Контакты", to: "/contact" },
     ];
-
+    // console.log(navs.map(a => a.title))
     return { navs };
   },
 });

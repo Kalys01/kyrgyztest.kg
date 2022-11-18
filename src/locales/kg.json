@@ -1,0 +1,30 @@
+{
+    "header": {
+      "title": "Кыргызтест",
+      "main": {
+        "caption": "Башкы бет",
+        "url": "/"
+      },
+      "news": {
+        "caption": "Жаңылыктар",
+        "url": "/news"
+      },
+      "result": {
+        "caption": "Жыйынтыктар",
+        "url": "/result"
+      },
+      "contacts": {
+        "caption": "Байланышуу",
+        "url": "/contact"
+      }
+    },
+  
+    "results": {
+      "title" : "Тесттин жыйынтыктары",
+      "placeholder": "Жеке номер",
+      "level": "Деңгээли",
+      "subtests": "Субтесттер",
+      "ball": "Балл",
+      "time": "Убактысы"
+    }
+  }

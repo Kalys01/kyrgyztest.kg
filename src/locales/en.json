@@ -1,11 +1,24 @@
 {
   "header": {
     "title": "Kyrgyztest",
-    "main": "Home",
-    "news": "News",
-    "results": "Results",
-    "contacts": "Contacts"
+    "main": {
+      "caption": "Home",
+      "url": "/"
+    },
+    "news": {
+      "caption": "News",
+      "url": "/news"
+    },
+    "result": {
+      "caption": "Results",
+      "url": "/result"
+    },
+    "contacts": {
+      "caption": "Contacts",
+      "url": "/contact"
+    }
   },
+
   "results": {
     "title" : "Test results",
     "placeholder": "Personal number",

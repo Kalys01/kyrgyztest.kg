@@ -1,11 +1,24 @@
 {
   "header": {
     "title": "Кыргызтест",
-    "main": "Главная",
-    "news": "Новости",
-    "results": "Результаты",
-    "contacts": "Контакты"
+    "main": {
+      "caption": "Главная",
+      "url": "/"
+    },
+    "news": {
+      "caption": "Новости",
+      "url": "/news"
+    },
+    "result": {
+      "caption": "Результаты",
+      "url": "/result"
+    },
+    "contacts": {
+      "caption": "Контакты",
+      "url": "/contact"
+    }
   },
+
   "results": {
     "title" : "Результаты теста",
     "placeholder": "Персональный номер",

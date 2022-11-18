@@ -3,15 +3,15 @@ import App from './App.vue'
 import router from './router'
 import { store } from './store'
 import './assets/tailwind.css'
-import ru from '@/locales/ru.json'
+import kg from '@/locales/kg.json'
 import { createI18n } from 'vue-i18n'
 import { messages, defaultLocale } from './locales'
 
-type MessageSchema = typeof ru
+type MessageSchema = typeof kg
 
 const LocalStorageLang = localStorage.getItem('lang')
 
-const i18n = createI18n<[MessageSchema], 'ru' | 'en'>({
+export const i18n = createI18n<[MessageSchema], 'kg' | 'ru' | 'en' >({
     messages,
     locale: LocalStorageLang || defaultLocale,
     fallbackLocale: defaultLocale,

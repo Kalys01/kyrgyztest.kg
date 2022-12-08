@@ -6,7 +6,7 @@
           <div class="flex text-gray-300 items-center ml-2 md:mx-3 lg:mx-0">
             <div class="mr-2 sm:mr-5">LOGO</div>
             <div class="hidden sm:flex">
-              <h1 class="uppercase text-md cursor-pointer md:text-xl">{{$t('messages')}}</h1>
+              <h1 class="uppercase text-md cursor-pointer md:text-xl">{{$t('header.title')}}</h1>
             </div>
           </div>
           <div class="flex text-xs md:ml-6 md:text-sm xl:text-md">
@@ -33,13 +33,16 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, computed } from "vue";
 import Nav from "@/models/ModelNav";
 import MultiLanguage from "./MultiLanguage.vue";
+import Link from "@/models/model";
+import { TranslateResult, I18n } from 'vue-i18n';
+import { useI18n } from 'vue-i18n';
 
 export default defineComponent({
   components: {
-    MultiLanguage,
+    MultiLanguage
   },
   setup() {
     const navs = <Nav[]>[
@@ -47,10 +50,17 @@ export default defineComponent({
       { title: "Новости", to: "/news" },
       { title: "Руководство", to: "/leadership" },
       { title: "Результаты тестов", to: "/result" },
-      { title: "Контакты", to: "/contact" },
+      { title: "Контакты", to: "/contact" }
     ];
     // console.log(navs.map(a => a.title))
-    return { navs };
-  },
+  
+    const headerLinks = "$t('header') as TranslateResult"
+
+
+    return {
+      navs,
+      headerLinks
+    }
+  }
 });
 </script>

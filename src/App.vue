@@ -2,20 +2,17 @@
   <div>
     <TheHeader />
     <AppLayout />
+    <TheFooter />
+    <MobileBottomSticky class="xs:hidden"/>
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
-import TheHeader from "@/components/TheHeader.vue";
-import AppLayout from "@/layouts/AppLayout.vue";
+<script lang="ts" setup>
+import TheHeader from "@/components/TheHeader.vue"
+import AppLayout from "@/layouts/AppLayout.vue"
+import TheFooter from '@/components/TheFooter.vue'
+import MobileBottomSticky from '@/components/TheMobileBottomSticky.vue'
 
-export default defineComponent({
-  components: {
-    TheHeader,
-    AppLayout,
-  },
-});
 </script>
 
 <style>

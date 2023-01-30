@@ -1,17 +1,15 @@
 <template>
-  <div class="flex flex-col items-center py-20">
-    <h1 class="font-bold text-xl md:text-4xl mb-[100px] px-3 lg:px-0 transition duration-200">
-      Нормативные акты
+  <h1 class="text-2xl font-semibold sm:text-4xl mb-[100px] px-3 lg:px-0">
+    Нормативные акты
+  </h1>
+  <div class="w-full">
+    <h1
+      v-for="(normative, index) in normativeActs"
+      :key="index"
+      class="font-bold text-md md:text-xl leading-relaxed py-6 px-3 lg:px-0 border-t-[.5px] border-gray-400 cursor-pointer hover:text-[#673AB7] transition duration-200"
+    >
+      <a :href="normative.to">{{ normative.title }}</a>
     </h1>
-    <div class="w-full py-10">
-      <h1
-        v-for="(normative, index) in normativeActs"
-        :key="index"
-        class="font-bold text-md md:text-xl leading-relaxed py-6 px-3 lg:px-0 border-t-[.5px] border-gray-400 cursor-pointer hover:text-[#673AB7] transition duration-200"
-      >
-        <a :href="normative.to">{{ normative.title }}</a>
-      </h1>
-    </div>
   </div>
 </template>
 
@@ -50,4 +48,3 @@ const normativeActs = ref<Nav[]>([
   },
 ])
 </script>
-

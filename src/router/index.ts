@@ -3,15 +3,23 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
+    alias: '/home',
     name: 'Home',
     component: () => import('../views/Home.vue'),
-    meta: {layout: 'AppLayoutNews'}
+    meta: {layout: 'AppLayoutMainPage'}
   },
   {
     path: '/news',
     name: 'News',
+    alias: '/news',
     component: () => import('../views/News.vue'),
     meta: {layout: 'AppLayoutNews'}
+  },
+  {
+    path: '/news/:id',
+    name: 'FullNews',
+    component: () => import('../views/FullNews.vue'),
+    meta: {layout: 'AppLayoutInfo'}
   },
   {
     path: '/leadership',
@@ -29,7 +37,7 @@ const routes: Array<RouteRecordRaw> = [
     path: '/result',
     name: 'Test results',
     component: () => import('../views/Result.vue'),
-    meta: {layout: 'AppLayoutNews'}
+    meta: {layout: 'AppLayoutInfo'}
   },
   {
     path: '/contact',
@@ -41,13 +49,13 @@ const routes: Array<RouteRecordRaw> = [
     path: '/forschool',
     name: 'For school',
     component: () => import('../views/Forschool.vue'),
-    meta: {layout: 'AppLayoutNews'}
+    meta: {layout: 'AppLayoutInfo'}
   },
   {
     path: '/graph',
     name: 'Graph',
     component: () => import('../views/Graph.vue'),
-    meta: {layout: 'AppLayoutNews'}
+    meta: {layout: 'AppLayoutInfo'}
   },
   {
     path: '/system',
@@ -59,13 +67,13 @@ const routes: Array<RouteRecordRaw> = [
     path: '/ads',
     name: 'Adsvertising',
     component: () => import('../views/Ads.vue'),
-    meta: {layout: 'AppLayoutNews'}
+    meta: {layout: 'AppLayoutInfo'}
   },
   {
     path: '/normative',
     name: 'Normative act',
     component: () => import('../views/Normative.vue'),
-    meta: {layout: 'AppLayoutNews'}
+    meta: {layout: 'AppLayoutInfo'}
   },
 ]
 

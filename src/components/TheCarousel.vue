@@ -11,27 +11,35 @@
     >
       <vueper-slide
         class="bg-yellow-400 text-red-500 text-right"
-        v-for="i in 3"
+        v-for="(n,i) in normativeActs"
         :key="i"
-        :title="i.toString()"
+        :title="n.title"
       >
       </vueper-slide>
     </vueper-slides>
   </div>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import { defineComponent } from "vue";
 import { VueperSlides, VueperSlide } from "vueperslides";
 import "vueperslides/dist/vueperslides.css";
+import { ref } from "@vue/reactivity";
 
-export default defineComponent({
-  components: {
-    VueperSlides,
-    VueperSlide,
+const normativeActs = ref([
+  {
+    title: "Конституция Кыргызской Республики",
   },
-  setup() {},
-});
+  {
+    title: "Закон «О государственном языке Кыргызской Республики» № 54 от 02.04.2004 г.",
+  },
+  {
+    title: "Концепция разработки и внедрения системы оценивания государственного языка «Кыргызтест» № 150 от 26.03.2013 г.",
+  },
+  {
+    title: "Национальная программа развития государственного языка и совершенствования языковой политики в Кыргызской Республике на 2014-2020 годы Национальная программа развития государственного языка и совершенствования Национальная программа развития государственного языка и совершенствования Национальная программа развития государственного языка и совершенствования",
+  }
+])
 </script>
 
 <style scoped>

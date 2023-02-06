@@ -1,20 +1,18 @@
 <template>
-  <div class="flex flex-col justify-center text-center my-20">
-    <h1 class="text-xl font-bold mb-8 uppercase dark:text-white">Статистика</h1>
-    <div class=" dark:bg-gray-900">
-      <BarChart />
+  <TheBlockComponent
+    title="Статистика"
+  >
+    <div class="w-full flex-col text-center">
+      <div class="dark:bg-gray-900">
+        <BarChart />
+      </div>
     </div>
-  </div>
+  </TheBlockComponent>
+
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script lang="ts" setup>
 import BarChart from './BarChart'
+import TheBlockComponent from "@/components/TheBlockComponent.vue";
 
-export default defineComponent({
-  components: {
-    BarChart
-  }
-
-})
 </script>

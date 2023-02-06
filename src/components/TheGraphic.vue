@@ -1,7 +1,7 @@
 <template>
     <TheBlockComponent
-      title="График проведения теста"
-      :backgroundColor="'bg-yellow-500'"
+      title="Режим работы"
+      :backgroundColor="'bg-gray-100'"
     >
       <div class="flex justify-center gap-6">
         <div class="flex flex-col justify-center items-center w-full max-w-[800px] tracking-wider">

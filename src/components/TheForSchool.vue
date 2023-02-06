@@ -1,7 +1,7 @@
 <template>
     <TheBlockComponent 
       title="Выпускникам школ"
-      :backgroundColor="'bg-gray-500'"
+      :backgroundColor="'bg-gray-100'"
     >
       <div class="flex justify-center gap-6">
         <div class="flex flex-col justify-center items-center w-full max-w-[800px] tracking-wider">

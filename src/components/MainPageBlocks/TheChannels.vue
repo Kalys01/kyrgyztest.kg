@@ -1,67 +1,42 @@
 <template>
     <TheBlockComponent 
       title="Каналы"
-      :backgroundColor="'bg-gray-100'"
+      :backgroundColor="'bg-gray-900 text-gray-300'"
     >
       <div class="flex justify-center gap-6">
-        <div class="grid grid-col grid-cols-2 gap-4 justify-center items-center w-full tracking-wider">
-          <div class="flex flex-col p-5 bg-gray-400">
-            <div class="flex gap-2">
-              <div class="flex max-w-[120px]">
-                <img class="object-cover w-full" src="@/assets/img/Pupils.jpg" alt="">
-              </div>
-              <div class="flex flex-col">
-                <h1>Youtube канал</h1>
-                <p>Канал с обучающими видео и дополнительными материалами по тематикам курсов</p>
-              </div>
-            </div>
-            <div class="">
-              <a href="#">Youtube канал</a>
-            </div>
-          </div>
-
-          <div class="flex flex-col p-5 bg-gray-400">
-            <div class="flex gap-2">
-              <div class="flex max-w-[120px]">
-                <img class="object-cover w-full" src="@/assets/img/Pupils.jpg" alt="">
-              </div>
-              <div class="flex flex-col">
-                <h1>Youtube канал</h1>
-                <p>Канал с обучающими видео и дополнительными материалами по тематикам курсов</p>
-              </div>
-            </div>
-            <div class="">
-              <a href="#">Youtube канал</a>
-            </div>
-          </div>
-          <div class="flex flex-col p-5 bg-gray-400">
-            <div class="flex gap-2">
-              <div class="flex max-w-[120px]">
-                <img class="object-cover w-full" src="@/assets/img/Pupils.jpg" alt="">
-              </div>
-              <div class="flex flex-col">
-                <h1>Youtube канал</h1>
-                <p>Канал с обучающими видео и дополнительными материалами по тематикам курсов</p>
-              </div>
-            </div>
-            <div class="">
-              <a href="#">Youtube канал</a>
-            </div>
-          </div>
-          <div class="flex flex-col p-5 bg-gray-400">
-            <div class="flex gap-2">
-              <div class="flex max-w-[120px]">
-                <img class="object-cover w-full" src="@/assets/img/Pupils.jpg" alt="">
-              </div>
-              <div class="flex flex-col">
-                <h1>Youtube канал</h1>
-                <p>Канал с обучающими видео и дополнительными материалами по тематикам курсов</p>
-              </div>
-            </div>
-            <div class="">
-              <a href="#">Youtube канал</a>
-            </div>
-          </div>
+        <div class="grid grid-col grid-cols-2 gap-8 justify-center items-center w-full tracking-wider">
+          <TheBlockChannel
+            img_src="channel5.png"
+            img_alt="youtube"
+            title="Youtube канал"
+            description="Канал с обучающими видео и дополнительными материалами по тематикам курсов"
+            link_title="Youtube канал"
+            link="#"
+          />
+          <TheBlockChannel
+            img_src="channel5.png"
+            img_alt="telegram"
+            title="Telegram канал"
+            description="Канал с обучающими видео и дополнительными материалами по тематикам курсов"
+            link_title="Telegram канал"
+            link="#"
+          />
+          <TheBlockChannel
+            img_src="channel5.png"
+            img_alt="facebook"
+            title="Facebook канал"
+            description="Канал с обучающими видео и дополнительными материалами по тематикам курсов"
+            link_title="Facebook канал"
+            link="#"
+          />
+          <TheBlockChannel
+            img_src="channel5.png"
+            img_alt="instagram"
+            title="Instagram канал"
+            description="Канал с обучающими видео и дополнительными материалами по тематикам курсов"
+            link_title="Instagram канал"
+            link="#"
+          />
         </div>
       </div>
     </TheBlockComponent>
@@ -69,5 +44,6 @@
 
 <script lang="ts" setup>
 import TheBlockComponent from "@/components/TheBlockComponent.vue";
+import TheBlockChannel from "@/components/TheBlockChannel.vue";
 
 </script>

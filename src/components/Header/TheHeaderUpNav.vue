@@ -41,11 +41,11 @@
 
 <script lang="ts">
 import NavUp from "@/models/ModelNavUp";
-import TheMobileButtonHumburger from "./TheMobileButtonHumburger.vue";
-import TheToggleTheme from "./TheToggleTheme.vue";
-import TheMobileSidebar from "./TheMobileSidebar.vue";
-import TheMobileSidebarOverlay from "./TheMobileSidebarOverlay.vue";
-import MultiLanguage from "./MultiLanguage.vue";
+import TheMobileButtonHumburger from "@/components/TheMobileButtonHumburger.vue";
+import TheToggleTheme from "@/components/TheToggleTheme.vue";
+import TheMobileSidebar from "@/components/TheMobileSidebar.vue";
+import TheMobileSidebarOverlay from "@/components/TheMobileSidebarOverlay.vue";
+import MultiLanguage from "@/components/MultiLanguage.vue";
 import { computed, defineComponent, onBeforeMount, watch } from "vue";
 import { MutationTypes } from "@/store/modules/mutation-types";
 import { useStore } from "@/store";

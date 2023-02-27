@@ -35,7 +35,7 @@
 <script lang="ts">
 import { defineComponent, computed } from "vue";
 import Nav from "@/models/ModelNav";
-import MultiLanguage from "./MultiLanguage.vue";
+import MultiLanguage from "@/components/MultiLanguage.vue";
 import Link from "@/models/model";
 import { TranslateResult, I18n } from 'vue-i18n';
 import { useI18n } from 'vue-i18n';

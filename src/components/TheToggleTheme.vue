@@ -21,21 +21,12 @@
   </button>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import { ActionTypes } from "@/store/modules/action-types";
-import { defineComponent } from "vue";
 import { useStore } from "vuex";
 
-export default defineComponent({
-  name: "ToggleTheme",
-  setup() {
-    const store = useStore();
+const store = useStore();
 
-    const toggleTheme = () => {
-      store.dispatch(ActionTypes.toggle_theme);
-    };
+const toggleTheme = () => store.dispatch(ActionTypes.toggle_theme);
 
-    return { toggleTheme };
-  },
-});
 </script>

@@ -9,7 +9,7 @@ export type Mutations<S = State> = {
 
 export const mutations: MutationTree<State> & Mutations = {
   [MutationTypes.SET_THEME](state: State, payload: string) {
-    state.theme = payload,
+    state.theme = payload
     localStorage.theme = payload
   },
   

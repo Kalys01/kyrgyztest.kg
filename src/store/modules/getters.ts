@@ -3,7 +3,7 @@ import { GetterTree } from "vuex";
 import { State } from './state';
 
 export type Getters = {
-  GET_THEME(state: State): string 
+  GET_THEME(state: State): string
   GET_NAVUPS(state: State): NavUp[]
   GET_SHOWSIDEBAR(state: State): boolean
 }

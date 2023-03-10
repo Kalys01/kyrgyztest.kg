@@ -39,54 +39,35 @@
   <TheMobileSidebar />
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import NavUp from "@/models/ModelNavUp";
 import TheMobileButtonHumburger from "@/components/TheMobileButtonHumburger.vue";
 import TheToggleTheme from "@/components/TheToggleTheme.vue";
 import TheMobileSidebar from "@/components/TheMobileSidebar.vue";
 import TheMobileSidebarOverlay from "@/components/TheMobileSidebarOverlay.vue";
 import MultiLanguage from "@/components/MultiLanguage.vue";
-import { computed, defineComponent, onBeforeMount, watch } from "vue";
+import { computed, onBeforeMount, watch } from "vue";
 import { MutationTypes } from "@/store/modules/mutation-types";
 import { useStore } from "@/store";
 import { ActionTypes } from "@/store/modules/action-types";
 
-export default defineComponent({
-  name: "HeaderUpNav",
-  components: {
-    TheToggleTheme,
-    MultiLanguage,
-    TheMobileButtonHumburger,
-    TheMobileSidebar,
-    TheMobileSidebarOverlay
-  },
-  setup() {
-    const store = useStore();
+const store = useStore();
 
-    const navups = store.getters.GET_NAVUPS;
+const navups = store.getters.GET_NAVUPS;
 
-    onBeforeMount: () => store.dispatch(ActionTypes.INIT_THEME);
+onBeforeMount( () => store.dispatch(ActionTypes.INIT_THEME) );
 
-    const theme = computed(() => store.getters.GET_THEME);
+const theme = computed( () => store.getters.GET_THEME );
+watch(theme, (newTheme) => {
+  const addTheme = document.querySelector("body") as HTMLElement;
 
-    watch(theme, (newTheme, oldTheme) => {
-      const addTheme = document.querySelector("body") as HTMLElement;
-
-      newTheme === "light"
-        ? addTheme.classList.remove("dark")
-        : addTheme.classList.add("dark");
-    });
-
-    const isShowSidebar = computed(() => store.getters.GET_SHOWSIDEBAR);
-    const closeSidebar = () => {
-      store.commit(MutationTypes.SET_SHOWSIDEBAR, false);
-    };
-
-    return {
-      navups,
-      closeSidebar,
-      isShowSidebar
-    };
-  }
+  newTheme === 'light'
+    ? addTheme.classList.remove("dark")
+    : addTheme.classList.add("dark");
 });
+
+const isShowSidebar = computed( () => store.getters.GET_SHOWSIDEBAR );
+
+const closeSidebar = () => store.commit(MutationTypes.SET_SHOWSIDEBAR, false);
+
 </script>

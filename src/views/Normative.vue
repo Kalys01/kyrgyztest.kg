@@ -1,21 +1,23 @@
 <template>
-  <h1 class="text-2xl font-semibold sm:text-4xl mb-[100px] px-3 lg:px-0">
-    Нормативные акты
-  </h1>
-  <div class="w-full">
-    <h1
-      v-for="(normative, index) in normativeActs"
-      :key="index"
-      class="font-bold text-md md:text-xl leading-relaxed py-6 px-3 lg:px-0 border-t-[.5px] border-gray-400 cursor-pointer hover:text-[#673AB7] transition duration-200"
-    >
-      <a :href="normative.to">{{ normative.title }}</a>
-    </h1>
-  </div>
+  <TheBlockComponent
+    title="Нормативные акты"
+  >
+    <div class="flex flex-col justify-start">
+      <p
+        v-for="(normative, index) in normativeActs"
+        :key="index"
+        class="font-bold text-md md:text-xl leading-relaxed py-6 px-3 lg:px-0 border-t-[.5px] border-gray-400 cursor-pointer hover:text-[#673AB7] transition duration-200"
+      >
+        <a :href="normative.to">{{ normative.title }}</a>
+      </p>
+    </div>
+  </TheBlockComponent>
 </template>
 
 <script lang="ts" setup>
 import Nav from "@/models/ModelNav";
 import { ref } from "@vue/reactivity";
+import TheBlockComponent from "@/components/TheBlockComponent.vue";
 
 const normativeActs = ref<Nav[]>([
   {

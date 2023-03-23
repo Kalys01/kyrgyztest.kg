@@ -6,6 +6,7 @@
   <TheForSchool />
   <TheGraphic />
   <TheChannels />
+  <FrequentQuestions/>
 </template>
 
 <script lang="ts" setup>
@@ -16,6 +17,7 @@ import TheStatistics from "@/components/MainPageBlocks/Statistics/TheStatistics.
 import TheForSchool from "@/components/MainPageBlocks/TheForSchool.vue";
 import TheGraphic from "@/components/MainPageBlocks/TheGraphic.vue";
 import TheChannels from "@/components/MainPageBlocks/TheChannels.vue";
+import FrequentQuestions from "@/components/MainPageBlocks/Frequent_Questions.vue";
 
 name: "Home"
 

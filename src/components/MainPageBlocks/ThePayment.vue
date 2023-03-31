@@ -1,13 +1,13 @@
 <template>
   <TheBlockComponent
     title="Тест акысы"
-    :backgroundColor="'bg-gray-100'"
+    :backgroundColor="'bg-white text-gray-900'"
   >
-    <div class="w-full flex justify-end items-center relative">
-      <div class="flex">
-        <img src="@/assets/img/pay.jpg" class=" rounded-md" alt="pay">
+    <div class="w-full flex md:justify-end justify-center items-center relative">
+      <div class="flex h-[400px] sm:h-auto">
+        <img src="@/assets/img/pay.jpg" class="object-none w-full rounded-md" alt="pay">
       </div>
-      <div class="flex flex-col absolute gap-5 p-7 left-12 text-sm md:text-md rounded-md backdrop-filter backdrop-blur-lg shadow-2xl">
+      <div class="flex flex-col absolute gap-5 p-7 left-0 sm:left-12 text-sm md:text-md rounded-md backdrop-filter backdrop-blur-lg shadow-2xl">
         <div><span class="font-bold">Алуучу:</span><br />«Кыргызтест» Мамлекеттик мекемеси</div>
         <div><span class="font-bold">Алуучунун банкы:</span><br />КР борбордук казыналыгы</div>
         <div><span class="font-bold">Төлөм коду:</span><br />14235400</div>

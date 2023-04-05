@@ -1,15 +1,15 @@
 <template>
-  <div class="flex flex-col p-5 gap-5 bg-gray-700 rounded-md">
+  <div class="flex flex-col text-md md:text-xl p-5 gap-5 bg-gray-700 rounded-md">
     <div class="flex gap-5">
-      <div class="flex max-w-[120px]">
+      <div class="flex max-w-[100px] xl:max-w-[120px]">
         <img class="object-cover w-full"
           :src="require(`@/assets/img/${img_src}`)"
           :alt="img_alt"
         >
       </div>
       <div class="flex flex-col gap-3">
-        <h1 class="text-xl font-bold">{{title}}</h1>
-        <p>{{description}}</p>
+        <h1 class="font-bold">{{title}}</h1>
+        <p class="text-sm">{{description}}</p>
       </div>
     </div>
     <div class="">

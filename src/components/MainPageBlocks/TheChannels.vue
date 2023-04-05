@@ -4,7 +4,7 @@
       :backgroundColor="'bg-gray-900 text-gray-300'"
     >
       <div class="flex justify-center gap-6">
-        <div class="grid grid-col grid-cols-2 gap-8 justify-center items-center w-full tracking-wider">
+        <div class="grid grid-col grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 justify-center items-center w-full tracking-wider">
           <TheBlockChannel
             img_src="channel5.png"
             img_alt="youtube"

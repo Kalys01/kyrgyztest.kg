@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col text-md md:text-xl p-5 gap-5 bg-gray-700 rounded-md">
+  <div class="relative flex flex-col text-md md:text-xl p-5 gap-5 bg-gray-700 rounded-md">
     <div class="flex gap-5">
       <div class="flex max-w-[100px] xl:max-w-[120px]">
         <img class="object-cover w-full"

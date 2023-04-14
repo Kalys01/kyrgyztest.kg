@@ -1,8 +1,12 @@
 <template>
-    <TheBlockComponent 
+    <TheBlockComponent
+      class="relative"
       title="Каналы"
       :backgroundColor="'bg-gray-900 text-gray-300'"
     >
+      <div class="absolute h-full w-full">
+        <img src="@/assets/img/payment.svg" class="w-full h-full object-fill -top-0" alt="payment">
+      </div>
       <div class="flex justify-center gap-6">
         <div class="grid grid-col grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 justify-center items-center w-full tracking-wider">
           <TheBlockChannel

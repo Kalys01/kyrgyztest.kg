@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-300 flex flex-col justify-center dark:bg-gray-800">
+  <div class="bg-gray-300 flex flex-col justify-center min-h-screen dark:bg-gray-800">
     <slot />
   </div>
 </template>

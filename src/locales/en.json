@@ -26,5 +26,32 @@
     "subtests": "Subtests",
     "ball": "Ball",
     "time": "Time"
-  }
+  },
+  
+  "navUps": [
+    {
+      "title": "Legal Acts",
+      "to": "/normative"
+    },
+    {
+      "title": "For School Graduates",
+      "to": "/forschool"
+    },
+    {
+      "title": "Kyrgyztest System",
+      "to": "/system"
+    },
+    {
+      "title": "Test Schedule",
+      "to": "/graph"
+    },
+    {
+      "title": "Practice Tests",
+      "to": "/training"
+    },
+    {
+      "title": "Announcements",
+      "to": "/ads"
+    }
+  ]
 }

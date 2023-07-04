@@ -20,6 +20,8 @@
 
 <script lang="ts" setup>
 import { LOCALES } from '@/locales/locales'
+// import NavUp from "@/models/ModelNavUp";
+// import { useI18n } from 'vue-i18n';
 import { defaultLocale } from '@/locales'
 import { MutationTypes } from "@/store/modules/mutation-types";
 import { useStore } from "@/store";
@@ -28,8 +30,29 @@ const locales = LOCALES
 const dfltLocale = defaultLocale
 
 const store = useStore();
+// const { t } = useI18n();
 
+
+// const navUps = t('navUps');
 const updateLanguage = (lang: locales) => {
+
+  // const navUps = loadNavUpsForLocale(locale)
   store.commit(MutationTypes.SET_LANG, lang)
+  window.location.reload();
+  // store.commit(MutationTypes.UPDT_NAV, navUps )
 }
+
+// const loadNavUpsForLocale = async (locale: string): Promise<NavUp[]> => {
+//   try {
+//     const response = await fetch(`@/locales/${locale}.json`);
+//     if (!response.ok) {
+//       throw new Error('Failed to fetch navUps');
+//     }
+//     const navUps = await response.json();
+//     return navUps;
+//   } catch (error) {
+//     console.error(error);
+//     return [];
+//   }
+// };
 </script>

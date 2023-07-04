@@ -1,12 +1,29 @@
+import { Locales } from '@/locales/locales';
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-
+import { useStore } from "@/store";
+import { MutationTypes } from '@/store/modules/mutation-types';
+// import { i18n } from '@/main';
+const store = useStore();
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     alias: '/home',
     name: 'Home',
     component: () => import('../views/Home.vue'),
-    meta: {layout: 'AppLayoutMainPage'}
+    meta: {layout: 'AppLayoutMainPage'},
+    // beforeEnter(to, from, next) {
+    //   next(store.state.lang)
+    //   const lang: any = to.params.Locales;
+    //   console.log('to -> '+to.params)
+    //   const navLocales = Object.values(Locales)
+    //   if (navLocales.includes(lang)) {
+    //     store.commit(MutationTypes.SET_LANG, lang); // Изменяем язык в хранилище Vuex
+    //     //i18n.global.locale.value = lang; // Изменяем язык в I18n
+    //     next();
+    //   } else {
+    //     next('/kg'); // Перенаправляем на язык по умолчанию, если передан некорректный языковой код
+    //   }
+    // }
   },
   {
     path: '/news',

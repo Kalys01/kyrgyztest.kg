@@ -1,23 +1,18 @@
-import NavUp from "@/models/ModelNavUp";
+// import NavUp from "@/models/ModelNavUp";
 import { defaultLocale } from '@/locales'
 
 export type State = {
   theme: string;
-  navUps: NavUp[];
+  // navUps: NavUp[];
+  translations: {};
   showSidebar: boolean;
   lang: string;
 };
 
 export const state: State = {
   theme: 'light',
-  navUps: [
-    {title: 'Нормативные акты', to: '/normative'},
-    {title: 'Выпускникам школ', to: '/forschool'},
-    {title: 'Система Кыргызтест', to: '/system'},
-    {title: 'График проведения теста', to: '/graph'},
-    {title: 'Тренировочные тесты', to: '/training'},
-    {title: 'Объявления', to: '/ads'}
-  ],
+  // navUps: messages[defaultLocale].navUps,
+  translations: {},
   showSidebar: false,
   lang: defaultLocale
 };

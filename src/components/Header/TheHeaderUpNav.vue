@@ -56,7 +56,7 @@ import { ActionTypes } from "@/store/modules/action-types";
 // import { TranslateResult } from "vue-i18n";
 // import { Link } from "@/models/model";
 // import { Locales } from '@/locales/locales'
-import { messages } from './../../locales/index';
+import { messages } from '@/locales/index';
 
 
 const store = useStore();

@@ -6,7 +6,7 @@
           <div class="flex text-gray-300 items-center ml-2 md:mx-3 lg:mx-0">
             <div class="mr-2 sm:mr-5">LOGO</div>
             <div class="hidden sm:flex">
-              <h1 class="uppercase text-md cursor-pointer md:text-xl">{{$t('title')}}</h1>
+              <h1 class="uppercase text-md cursor-pointer lg:text-xl">{{$t('title')}}</h1>
             </div>
           </div>
           <div class="flex text-xs md:ml-6 md:text-sm xl:text-md">

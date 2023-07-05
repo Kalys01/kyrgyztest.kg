@@ -6,7 +6,7 @@
           <div class="flex text-gray-300 items-center ml-2 md:mx-3 lg:mx-0">
             <div class="mr-2 sm:mr-5">LOGO</div>
             <div class="hidden sm:flex">
-              <h1 class="uppercase text-md cursor-pointer md:text-xl">{{$t('header.title')}}</h1>
+              <h1 class="uppercase text-md cursor-pointer md:text-xl">{{$t('title')}}</h1>
             </div>
           </div>
           <div class="flex text-xs md:ml-6 md:text-sm xl:text-md">
@@ -32,35 +32,15 @@
   </nav>
 </template>
 
-<script lang="ts">
-import { defineComponent, computed } from "vue";
-import Nav from "@/models/ModelNav";
+<script lang="ts" setup>
+import { computed, ref } from "vue";
 import MultiLanguage from "@/components/MultiLanguage.vue";
-import Link from "@/models/model";
-import { TranslateResult, I18n } from 'vue-i18n';
-import { useI18n } from 'vue-i18n';
+import { messages } from '@/locales/index';
+import { useStore } from "@/store";
 
-export default defineComponent({
-  components: {
-    MultiLanguage
-  },
-  setup() {
-    const navs = <Nav[]>[
-      { title: "Главная", to: "/" },
-      { title: "Новости", to: "/news" },
-      { title: "Руководство", to: "/leadership" },
-      { title: "Результаты тестов", to: "/result" },
-      { title: "Контакты", to: "/contact" }
-    ];
-    // console.log(navs.map(a => a.title))
-  
-    const headerLinks = "$t('header') as TranslateResult"
+const store = useStore();
 
+const lang = ref(localStorage.getItem('lang') || store.state.lang);
+const navs = computed( () => messages[lang.value].navs )
 
-    return {
-      navs,
-      headerLinks
-    }
-  }
-});
 </script>

@@ -36,6 +36,10 @@
       "to": "/news"
     },
     {
+      "title": "Директор",
+      "to": "/leadership"
+    },
+    {
       "title": "Жыйынтыктар",
       "to": "/result"
     },

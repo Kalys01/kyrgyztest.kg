@@ -36,6 +36,10 @@
       "to": "/news"
     },
     {
+      "title": "Director",
+      "to": "/leadership"
+    },
+    {
       "title": "Results",
       "to": "/result"
     },

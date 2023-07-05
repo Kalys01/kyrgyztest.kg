@@ -16,14 +16,14 @@
       <ul>
         <li
           class="my-10"
-          v-for="(navup, id) in navups"
+          v-for="(navUp, id) in navUps"
           :key="id"
         >
           <router-link
-            :to="navup.to"
+            :to="navUp.to"
             @click="closeSidebar"
           >
-            {{ navup.title }}
+            {{ navUp.title }}
           </router-link>
         </li>
       </ul>
@@ -34,11 +34,15 @@
 <script lang="ts" setup>
 import { useStore } from "@/store";
 import { MutationTypes } from "@/store/modules/mutation-types";
-import { computed } from "vue";
+import { computed, ref } from "vue";
 import { ChevronLeftIcon } from '@heroicons/vue/outline'
+import { messages } from '@/locales/index'
 
 const store = useStore();
-const navups = store.getters.GET_NAVUPS;
+// const navups = store.getters.GET_NAVUPS;
+
+const lang = ref(localStorage.getItem('lang') || store.state.lang);
+const navUps = computed( () => messages[lang.value].navUps)
 
 const closeSidebar = () => {
   store.commit(MutationTypes.SET_SHOWSIDEBAR, false);

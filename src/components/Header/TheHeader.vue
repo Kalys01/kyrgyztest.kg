@@ -1,7 +1,7 @@
 <template>
   <div
     class="w-full z-50 ease-in-out transition-all duration-500 translate-y-100"
-    :class="{ 'sticky top-0': isHeaderHidden }"
+    :class="{ 'sticky top-9 lg:top-0': isHeaderHidden }"
   >
     <TheHeaderUpNav />
     <TheHeaderNav />

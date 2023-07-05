@@ -1,33 +1,4 @@
 {
-  "header": {
-    "title": "Кыргызтест",
-    "main": {
-      "caption": "Главная",
-      "url": "/"
-    },
-    "news": {
-      "caption": "Новости",
-      "url": "/news"
-    },
-    "result": {
-      "caption": "Результаты",
-      "url": "/result"
-    },
-    "contacts": {
-      "caption": "Контакты",
-      "url": "/contact"
-    }
-  },
-
-  "results": {
-    "title" : "Результаты теста",
-    "placeholder": "Персональный номер",
-    "level": "Уровень",
-    "subtests": "Субтесты",
-    "ball": "Балл",
-    "time": "Время"
-  },
-  
   "navUps": [
     {
       "title": "Нормативные акты",
@@ -53,5 +24,36 @@
       "title": "Объявления",
       "to": "/ads"
     }
-  ]
+  ],
+
+  "navs": [
+    {
+      "title": "Главная",
+      "to": "/"
+    },
+    {
+      "title": "Новости",
+      "to": "/news"
+    },
+    {
+      "title": "Результаты",
+      "to": "/result"
+    },
+    {
+      "title": "Контакты",
+      "to": "/contact"
+    }
+  ],
+
+  "title": "Кыргызтест",
+
+  "results": {
+    "title" : "Результаты теста",
+    "placeholder": "Персональный номер",
+    "level": "Уровень",
+    "subtests": "Субтесты",
+    "ball": "Балл",
+    "time": "Время"
+  }
+  
 }

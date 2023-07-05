@@ -1,33 +1,4 @@
 {
-  "header": {
-    "title": "Kyrgyztest",
-    "main": {
-      "caption": "Home",
-      "url": "/"
-    },
-    "news": {
-      "caption": "News",
-      "url": "/news"
-    },
-    "result": {
-      "caption": "Results",
-      "url": "/result"
-    },
-    "contacts": {
-      "caption": "Contacts",
-      "url": "/contact"
-    }
-  },
-
-  "results": {
-    "title" : "Test results",
-    "placeholder": "Personal number",
-    "level": "Level",
-    "subtests": "Subtests",
-    "ball": "Ball",
-    "time": "Time"
-  },
-  
   "navUps": [
     {
       "title": "Legal Acts",
@@ -53,5 +24,36 @@
       "title": "Announcements",
       "to": "/ads"
     }
-  ]
+  ],
+
+  "navs": [
+    {
+      "title": "Home",
+      "to": "/"
+    },
+    {
+      "title": "News",
+      "to": "/news"
+    },
+    {
+      "title": "Results",
+      "to": "/result"
+    },
+    {
+      "title": "Contacts",
+      "to": "/contact"
+    }
+  ],
+
+  "title": "Kyrgyztest",
+
+  "results": {
+    "title" : "Test results",
+    "placeholder": "Personal number",
+    "level": "Level",
+    "subtests": "Subtests",
+    "ball": "Ball",
+    "time": "Time"
+  }
+  
 }

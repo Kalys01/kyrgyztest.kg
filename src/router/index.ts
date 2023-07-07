@@ -1,4 +1,4 @@
-import { Locales } from '@/locales/locales';
+// import { Locales } from '@/locales/locales';
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import { useStore } from "@/store";
 import { MutationTypes } from '@/store/modules/mutation-types';

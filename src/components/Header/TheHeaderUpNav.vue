@@ -1,5 +1,5 @@
 <template>
-  <div
+  <nav
     class="top-0 fixed lg:relative z-30 flex lg:justify-center justify-end items-center w-full py-1 lg:px-1 bg-gray-900 text-gray-300"
   >
     <div
@@ -30,7 +30,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </nav>
   <TheMobileSidebarOverlay
     class="ease-in-out transition-all duration-500"
     v-show="isShowSidebar"

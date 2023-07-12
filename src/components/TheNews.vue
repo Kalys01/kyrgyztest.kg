@@ -1,5 +1,8 @@
 <template>
-  <div class="grid grid-cols-12">
+  <div
+    class="grid grid-cols-12"
+    v-for="n in 19"
+  >
     <div class="col-span-1 md:col-span-3 bg-[#212121]"></div>
     <div class="col-span-11 md:col-span-9 border-l-2  py-5 border-gray-300 bg-gray-100 dark:bg-[#212121] transition duration-500">
       <div class="sticky top-0 z-20 bg-white w-full py-5 hidden">
@@ -112,17 +115,47 @@
       
     </div>
   </div>
+  <Pagination
+    :totalPages="totalPages"
+    :currentPage="currentPage"
+    :changePage="changePage"
+  />
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import Pagination from '@/components/ThePagination.vue'
+import { computed, ref } from 'vue'
 
 const datas = ref([])
 
-// fetch('https://jsonplaceholder.typicode.com/posts/5')
-//       .then(response => response.json())
-//       .then(json => console.log(json))
+fetch('https://jsonplaceholder.typicode.com/posts/4')
+      .then(response => response.json())
+      .then(json => console.log(json))
 
-// datas.value = response
+// datas.value = json
 
+// computed(() => {
+//   console.log('dkfjdkf'+ datas)
+// })
+const news = ref(45)
+
+const itemsPerPage = 10; // Количество новостей на странице
+const currentPage = ref(1);
+
+const totalPages = computed(() => {
+  // return Math.ceil(news.value.length / itemsPerPage);
+  return Math.ceil(12 / itemsPerPage);
+});
+
+const paginatedNews = computed(() => {
+  const startIndex = (currentPage.value - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  return news.value.slice(startIndex, endIndex);
+});
+
+function changePage(page) {
+  if (page >= 1 && page <= totalPages.value) {
+    currentPage.value = page;
+  }
+}
 </script>

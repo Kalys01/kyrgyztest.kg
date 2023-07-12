@@ -2,40 +2,40 @@
   <nav class="flex justify-center m-16">
     <ul class="flex space-x-2">
       <li>
-        <button
+        <TheButton
+          :title="'<<<'"
+          :backgroundColor="'bg-[#673AB7]'"
+          :color="'text-gray-300'"
           :disabled="currentPage === 1"
           @click="changePage(currentPage - 1)"
-          class="pagination-link"
-        >
-          Previous
-        </button>
+        />
       </li>
       <li v-for="page in totalPages" :key="page">
-        <button
+        <TheButton
+          :class="{'bg-[#673AB7] text-gray-300': currentPage === page}"
           @click="changePage(page)"
-          :class="{'pagination-link active': currentPage === page}"
         >
           {{ page }}
-        </button>
+        </TheButton>
       </li>
       <li>
-        <button
+        <TheButton
+          :title="'>>>'"
+          :backgroundColor="'bg-[#673AB7]'"
+          :color="'text-gray-300'"
           :disabled="currentPage === totalPages"
           @click="changePage(currentPage + 1)"
-          class="pagination-link"
-        >
-          Next
-        </button>
+        />
       </li>
     </ul>
   </nav>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
+import TheButton from '@/components/UI/TheButton.vue'
 import { ref } from 'vue';
 
-export default {
-  props: {
+  const props = defineProps({
     totalPages: {
       type: Number,
       required: true,
@@ -47,22 +47,20 @@ export default {
     changePage: {
       type: Function,
       required: true,
-    },
-  },
-};
+    }
+});
 </script>
 
 <style scoped>
 
-.pagination-link {
+/* .pagination-link {
   padding: 0.5rem 1rem;
   border: 1px solid #ddd;
   background-color: #673AB7;
-  cursor: pointer;
-}
+ }
 
-.pagination-link.active {
+ .pagination-link.active {
   background-color: #673AB7;
   color: #fff;
-}
+} */
 </style>

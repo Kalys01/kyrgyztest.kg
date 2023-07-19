@@ -1,6 +1,6 @@
 <template>
   <button
-    class="w-full flex justify-center cursor-pointer border border-gray-700 dark:border-gray-300"
+    class="cursor-pointer shadow-xl border border-gray-700 dark:border-gray-300"
     :class="[backgroundColor, color, rounded, borderColor, paddingX, paddingY]"
   >{{ title }}
     <slot />

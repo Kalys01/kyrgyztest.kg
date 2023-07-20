@@ -10,11 +10,9 @@
         <span>2022</span>
       </div>
       <div class="py-5">
-        <div class="w-5 h-5 rounded-full absolute -ml-3 bg-black flex justify-center items-center border-2 border-white">
+        <div class="w-5 h-5 rounded-full absolute -ml-3 bg-[#673AB7] flex justify-center items-center border-2 border-white">
           <div class="absolute">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-300 " viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
-            </svg>
+            <ClockIcon class="h-6 w-6 text-gray-300"/>
           </div>
           <span class="absolute ml-36 w-[100px] md:-ml-36 text-gray-400 md:text-gray-300 text-xs md:text-sm dark:text-gray-300  transition duration-500">13 Feb 2022</span>
         </div>
@@ -51,9 +49,9 @@
 <script lang="ts" setup>
 import { computed, ref, onMounted } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
-import axios from 'axios'
+import { ClockIcon } from '@heroicons/vue/solid';
+import axios from 'axios';
 import News from '@/models/ModelNews/News';
-
 import VPagination from "@hennge/vue3-pagination";
 import "@hennge/vue3-pagination/dist/vue3-pagination.css";
 
@@ -88,7 +86,7 @@ const paginatedPosts = computed(() => {
 });
 
 function changePage(page) {
-  router.push(`${route.path}?page=${page}`)
+  router.push(`${route.path}?page=${page}`)  // saves current page when reloading 
   if (page >= 1 && page <= totalPages.value) {
     currentPage.value = page;
   }

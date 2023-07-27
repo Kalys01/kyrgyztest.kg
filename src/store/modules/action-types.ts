@@ -3,4 +3,6 @@ export enum ActionTypes {
   toggle_theme = 'TOGGLE_THEME',
   open_sidebar = 'OPEN_SIDEBAR',
   // LOAD_TRANSLATIONS = 'LOAD_TRANSLATIONS',
+
+  FetchPosts = 'FETCH_POSTS'
 }

@@ -51,33 +51,26 @@ import { computed, ref, onMounted } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 import { ClockIcon } from '@heroicons/vue/solid';
 import axios from 'axios';
+import { useStore } from "@/store";
+import { ActionTypes } from "@/store/modules/action-types";
+
 import News from '@/models/ModelNews/News';
 import VPagination from "@hennge/vue3-pagination";
 import "@hennge/vue3-pagination/dist/vue3-pagination.css";
 
 const router = useRouter();
 const route = useRoute();
+const store = useStore();
 
-const posts = ref<News[]>([]);
 const currentPage = ref(Number(route.query.page) || 1);
+
 const itemsPerPage = 7; // Количество новостей на странице
 
-const fetchPosts = async () => {
-  try {
-    const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
-    posts.value = response.data;
-  } catch (error) {
-    console.error(error);
-  }
-};
+onMounted( () => store.dispatch(ActionTypes.FetchPosts) );
 
-onMounted(() => {
-  fetchPosts();
-});
+const posts = computed( () => store.getters.GET_POST );
 
-const totalPages = computed(() => {
-  return Math.ceil(posts.value.length / itemsPerPage);
-});
+const totalPages = computed( () => Math.ceil(posts.value.length / itemsPerPage) );
 
 const paginatedPosts = computed(() => {
   const startIndex = (currentPage.value - 1) * itemsPerPage;
@@ -85,7 +78,7 @@ const paginatedPosts = computed(() => {
   return posts.value.slice(startIndex, endIndex);
 });
 
-function changePage(page) {
+function changePage(page: number) {
   router.push(`${route.path}?page=${page}`)  // saves current page when reloading 
   if (page >= 1 && page <= totalPages.value) {
     currentPage.value = page;

@@ -1,5 +1,6 @@
 // import NavUp from "@/models/ModelNavUp";
 import { defaultLocale } from '@/locales'
+import News from "@/models/ModelNews";
 
 export type State = {
   theme: string;
@@ -7,6 +8,7 @@ export type State = {
   translations: {};
   showSidebar: boolean;
   lang: string;
+  posts: News[];
 };
 
 export const state: State = {
@@ -14,5 +16,6 @@ export const state: State = {
   // navUps: messages[defaultLocale].navUps,
   translations: {},
   showSidebar: false,
-  lang: defaultLocale
+  lang: defaultLocale,
+  posts: [],
 };

@@ -1,10 +1,12 @@
 // import { Locales } from './../../locales/locales';
 import { MutationTypes } from './mutation-types';
-import { ActionContext, ActionTree, Commit } from "vuex";
+import { ActionContext, ActionTree } from "vuex";
 import { ActionTypes } from "./action-types";
 import { Mutations } from "./mutations";
 import { State } from "./state";
 // import { messages } from './../../locales/index';
+import axios from 'axios';
+import News from '@/models/ModelNews';
 
 type ActionAugments = Omit<ActionContext<State, State>, 'commit'> & {
   commit<K extends keyof Mutations>(
@@ -16,6 +18,8 @@ type ActionAugments = Omit<ActionContext<State, State>, 'commit'> & {
 export type Actions = {
   [ActionTypes.INIT_THEME](context: ActionAugments): void;
   // [ActionTypes.LOAD_TRANSLATIONS](context: { commit: Commit, state: State }, payload: any): void;
+
+  [ActionTypes.FetchPosts](context: ActionAugments): void;
 }
 
 export const actions: ActionTree<State, State> & Actions = {
@@ -43,7 +47,7 @@ export const actions: ActionTree<State, State> & Actions = {
 
   [ActionTypes.open_sidebar]({ commit }, payload: boolean) {
     commit(MutationTypes.SET_SHOWSIDEBAR, payload)
-  }
+  },
 
   // [ActionTypes.LOAD_TRANSLATIONS]({ commit, state}, payload) {
     // try {
@@ -72,4 +76,14 @@ export const actions: ActionTree<State, State> & Actions = {
 
   //   commit(MutationTypes.SET_TRANSLATIONS, translation );
   // },
+
+  async [ActionTypes.FetchPosts]({ commit }) {
+    try {
+      const responce = await axios.get('https://jsonplaceholder.typicode.com/posts');
+      const posts: News[] = responce.data;
+      commit(MutationTypes.SET_POSTS, posts)
+    } catch (error) {
+      console.log(error)
+    }
+  }
 }

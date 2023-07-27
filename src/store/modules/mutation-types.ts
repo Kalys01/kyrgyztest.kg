@@ -3,4 +3,6 @@ export enum MutationTypes {
   SET_SHOWSIDEBAR = 'SET_SHOWSIDEBAR',
   SET_LANG = 'SET_LANG',
   // SET_TRANSLATIONS = 'SET_TRANSLATIONS',
+
+  SET_POSTS = 'SET_POSTS',
 }

@@ -11,6 +11,7 @@ import { Mutations, mutations } from './modules/mutations'
 import { Actions, actions } from './modules/actions'
 import { Getters, getters } from './modules/getters'
 
+
 export const store = createStore<State>({
   plugins: process.env.NODE_ENV === 'development' ? [createLogger()] : [],
   state,
@@ -18,8 +19,7 @@ export const store = createStore<State>({
   actions,
   getters,
 
-  modules: {
-  }
+  modules: {}
 })
 
 export function useStore() {

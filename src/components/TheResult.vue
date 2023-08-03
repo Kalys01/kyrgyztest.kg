@@ -1,18 +1,8 @@
 <template>
   <h1 class="mb-[100px] text-4xl font-semibold">{{$t('results.title')}}</h1>
   <div class="flex flex-col justify-center items-center w-full max-w-[800px] px-3 mb-[180px] tracking-wider">
-    <form class="flex flex-col justify-center mb-14">
-      <div class=" h-10 flex">
-        <input type="text" class="outline-none border-r-0 rounded-l-md px-2 border-[1px] border-[#673AB7] dark:bg-gray-800 " :placeholder="$t('results.placeholder')">
-        <button
-          class="border-[0px] border-[#673AB7] bg-[#673AB7] hover:bg-purple-700 h-full px-8 rounded-r-md"
-        >
-          <SearchIcon class="w-6 h-6 text-gray-300"/>
-        </button>
-      </div>
-    </form>
-
-    <h1 class="text-xl font-bold mb-10">{{$t('results.placeholder')}}: <span>220511-58794</span></h1>
+    <SentNumber v-model="personNumber"/>
+    <h1 class="text-xl font-bold mb-10">{{$t('results.placeholder')}}: <span>{{ personNumber }}</span></h1>
     <h1 class="text-xl font-bold mb-10">{{$t('results.level')}}: <span>B2</span></h1>
     <table class="">
       <thead>
@@ -22,9 +12,9 @@
           <th class="text-center px-4 py-2">{{$t('results.time')}}</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody >
         <tr class="border-t-[1px] border-gray-500 py-2">
-          <td class="">Лексика Грамматика</td>
+          <td class="">{{data.items.subtest}}</td>
           <td class="text-center">66</td>
           <td class="text-center">45:34</td>
         </tr>
@@ -53,50 +43,54 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, reactive, toRefs } from 'vue'
+<script lang="ts" setup>
+import { computed, reactive, toRefs, ref } from 'vue'
 import { SearchIcon } from '@heroicons/vue/outline'
+import SentNumber from '@/components/SentNumber.vue'
+import { useStore } from 'vuex';
 
-export default defineComponent({
-  components: {
-    SearchIcon
-  },
-  setup() {
-    interface ItemObj {
-      subtest: string;
-      ball: number;
-      time: string; 
+const store = useStore();
+
+interface ItemObj {
+  subtest: string;
+  ball: number;
+  time: string; 
+}
+const data = reactive<ItemObj>({
+  items: [
+    {
+      subtest: "Лексика.Грамматика",
+      ball: 89,
+      time: '12:45'
+    },
+    {
+      subtest: "Окуу",
+      ball: 89,
+      time: '12:45'
+    },
+    {
+      subtest: "Угуу",
+      ball: 89,
+      time: '12:45'
+    },
+    {
+      subtest: "Жазуу",
+      ball: 89,
+      time: '12:45'
+    },
+    {
+      subtest: "Сүйлөө",
+      ball: 89,
+      time: '12:45'
     }
-    const data = reactive({
-      items: [
-        {
-          subtest: "Лексика.Грамматика",
-          ball: 89,
-          time: '12:45'
-        },
-        {
-          subtest: "Окуу",
-          ball: 89,
-          time: '12:45'
-        },
-        {
-          subtest: "Угуу",
-          ball: 89,
-          time: '12:45'
-        },
-        {
-          subtest: "Жазуу",
-          ball: 89,
-          time: '12:45'
-        },
-        {
-          subtest: "Сүйлөө",
-          ball: 89,
-          time: '12:45'
-        }
-      ]
+  ]
 
-    })
-  }
 })
+
+// const personNumber = ref('');
+
+const personNumber = ref(store.state.personNumber);
+
+
+
 </script>

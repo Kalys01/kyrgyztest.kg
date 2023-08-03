@@ -20,6 +20,7 @@ export type Actions = {
   // [ActionTypes.LOAD_TRANSLATIONS](context: { commit: Commit, state: State }, payload: any): void;
 
   [ActionTypes.FetchPosts](context: ActionAugments): void;
+  [ActionTypes.SEND_DATA_TO_SERVER](context: ActionAugments, payload: string): void;
 }
 
 export const actions: ActionTree<State, State> & Actions = {
@@ -82,6 +83,22 @@ export const actions: ActionTree<State, State> & Actions = {
       const responce = await axios.get('https://jsonplaceholder.typicode.com/posts');
       const posts: News[] = responce.data;
       commit(MutationTypes.SET_POSTS, posts)
+    } catch (error) {
+      console.log(error)
+    }
+  },
+
+  async [ActionTypes.SEND_DATA_TO_SERVER]({ commit }, payload) {
+    
+    try {
+      const response = await axios.post('/api/data', { data: payload });
+      if(response.status === 200) {
+        console.log('Запрос выполнен успешно!')
+      } else {
+        console.log(`Ошибка. ${response.statusText}`)
+      }
+
+      commit(MutationTypes.SET_PERSON_NUMBER, response.data);
     } catch (error) {
       console.log(error)
     }

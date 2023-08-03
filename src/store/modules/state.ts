@@ -9,6 +9,7 @@ export type State = {
   showSidebar: boolean;
   lang: string;
   posts: News[];
+  personNumber: string;
 };
 
 export const state: State = {
@@ -18,4 +19,5 @@ export const state: State = {
   showSidebar: false,
   lang: defaultLocale,
   posts: [],
+  personNumber: '',
 };

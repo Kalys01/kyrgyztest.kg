@@ -5,4 +5,5 @@ export enum MutationTypes {
   // SET_TRANSLATIONS = 'SET_TRANSLATIONS',
 
   SET_POSTS = 'SET_POSTS',
+  SET_PERSON_NUMBER = 'SET_PERSON_NUMBER',
 }

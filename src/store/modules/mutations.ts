@@ -10,6 +10,7 @@ export type Mutations<S = State> = {
   [MutationTypes.SET_SHOWSIDEBAR](state: S, payload: boolean): void;
   [MutationTypes.SET_LANG](state: S, payload: string): void;
   // [MutationTypes.SET_TRANSLATIONS](state: State, translations: Record<string, Record<string, string>>): void;
+  [MutationTypes.SET_PERSON_NUMBER](state: S, payload: string): void;
 
   [MutationTypes.SET_POSTS](state: S, payload: News[]): void;
 }
@@ -39,6 +40,9 @@ export const mutations: MutationTree<State> & Mutations = {
 
   [MutationTypes.SET_POSTS](state: State, payload: News[]) {
     state.posts = payload
+  },
+  [MutationTypes.SET_PERSON_NUMBER](state: State, payload: string) {
+    state.personNumber = payload
   }
 
 }

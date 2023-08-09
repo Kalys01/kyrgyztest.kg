@@ -1,12 +1,12 @@
 // import { Locales } from './../../locales/locales';
-import { MutationTypes } from './mutation-types';
+import { MutationTypes } from "./mutation-types";
 import { ActionContext, ActionTree } from "vuex";
 import { ActionTypes } from "./action-types";
 import { Mutations } from "./mutations";
 import { State } from "./state";
 // import { messages } from './../../locales/index';
-import axios from 'axios';
-import News from '@/models/ModelNews';
+import axios from "axios";
+import News from "@/models/ModelNews";
 
 type ActionAugments = Omit<ActionContext<State, State>, 'commit'> & {
   commit<K extends keyof Mutations>(
@@ -80,17 +80,23 @@ export const actions: ActionTree<State, State> & Actions = {
 
   async [ActionTypes.FetchPosts]({ commit }) {
     try {
+      commit(MutationTypes.SET_LOADING, true);
+      await new Promise((resolve) => setTimeout(resolve, 3000));
       const responce = await axios.get('https://jsonplaceholder.typicode.com/posts');
       const posts: News[] = responce.data;
       commit(MutationTypes.SET_POSTS, posts)
     } catch (error) {
       console.log(error)
+    } finally {
+      commit(MutationTypes.SET_LOADING, false)
     }
   },
 
   async [ActionTypes.SEND_DATA_TO_SERVER]({ commit }, payload) {
     
     try {
+      commit(MutationTypes.SET_LOADING, true);
+      await new Promise((resolve) => setTimeout(resolve, 3000));
       const response = await axios.post('/api/data', { data: payload });
       if(response.status === 200) {
         console.log('Запрос выполнен успешно!')
@@ -101,6 +107,9 @@ export const actions: ActionTree<State, State> & Actions = {
       commit(MutationTypes.SET_PERSON_NUMBER, response.data);
     } catch (error) {
       console.log(error)
+    } finally {
+      commit(MutationTypes.SET_LOADING, false);
+      commit(MutationTypes.SET_SHOW_RESULT, true);
     }
   }
 }

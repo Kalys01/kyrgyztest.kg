@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import TheResult from '@/components/TheResult.vue'
+import TheResult from '@/components/Results/TheResult.vue'
 
 export default defineComponent({
   components: {

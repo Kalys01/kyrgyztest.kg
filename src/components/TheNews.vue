@@ -5,9 +5,12 @@
     :key="post.id"
   >
     <div class="col-span-1 md:col-span-3 bg-[#212121]"></div>
+
     <div class="col-span-11 md:col-span-9 border-l-2  py-5 border-gray-300 bg-gray-100 dark:bg-[#212121] transition duration-500">
       <div class="sticky top-0 z-20 bg-white w-full py-5 hidden">
         <span>2022</span>
+      </div>
+      <div>
       </div>
       <div class="py-5">
         <div class="w-5 h-5 rounded-full absolute -ml-3 bg-[#673AB7] flex justify-center items-center border-2 border-white">
@@ -19,7 +22,9 @@
         <router-link to="/news/2">
           <div class="relative grid w-[92%] sm:w-[94%] h-80 sm:h-52 md:h-40 lg:h-48 mt-9 md:mt-0 xl:h-56 max-h-80 mx-3 xs:mx-5 md:mx-10 rounded-md overflow-hidden bg-black cursor-pointer shadow-2xl">
             <div class="w-full h-full transition duration-300 ease-in-out text-gray-400 absolute z-10 hover:text-white">
-              <div class="absolute w-full h-[70%] sm:h-full bottom-0 p-3 sm:p-4 md:p-6 sm:w-[80%] rounded-md bg-opacity-50 sm:bg-opacity-0 backdrop-filter sm:backdrop-filter-none backdrop-blur-lg sm:backdrop-blur-none">
+              <SkeletonLoader v-if="isLoading" class="w-full h-full " />
+
+              <div v-else class="absolute w-full h-[70%] sm:h-full bottom-0 p-3 sm:p-4 md:p-6 sm:w-[80%] rounded-md bg-opacity-50 sm:bg-opacity-0 backdrop-filter sm:backdrop-filter-none backdrop-blur-lg sm:backdrop-blur-none">
                 <h1 class="timeline-title text-md lg:text-xl xl:text-3xl">{{ post.title }}</h1>
                 <p class="text-gray-300 text-xs lg:text-sm ">
                 {{ post.body }}
@@ -47,14 +52,14 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, ref, onMounted } from 'vue';
-import { useRouter, useRoute } from 'vue-router';
-import { ClockIcon } from '@heroicons/vue/solid';
-import axios from 'axios';
+import { computed, ref, onMounted } from "vue";
+import { useRouter, useRoute } from "vue-router";
+import { ClockIcon } from "@heroicons/vue/solid";
+import axios from "axios";
 import { useStore } from "@/store";
 import { ActionTypes } from "@/store/modules/action-types";
-
-import News from '@/models/ModelNews/News';
+import SkeletonLoader from "@/components/UI/SkeletonLoader.vue";
+import News from "@/models/ModelNews/News";
 import VPagination from "@hennge/vue3-pagination";
 import "@hennge/vue3-pagination/dist/vue3-pagination.css";
 
@@ -69,6 +74,7 @@ const itemsPerPage = 7; // Количество новостей на стран
 onMounted( () => store.dispatch(ActionTypes.FetchPosts) );
 
 const posts = computed( () => store.getters.GET_POST );
+const isLoading = computed( () => store.getters.GET_LOADING );
 
 const totalPages = computed( () => Math.ceil(posts.value.length / itemsPerPage) );
 
@@ -83,6 +89,6 @@ function changePage(page: number) {
   if (page >= 1 && page <= totalPages.value) {
     currentPage.value = page;
   }
-}
+};
 
 </script>

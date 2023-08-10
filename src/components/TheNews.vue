@@ -27,7 +27,7 @@
               <div v-else class="absolute w-full h-[70%] sm:h-full bottom-0 p-3 sm:p-4 md:p-6 sm:w-[80%] rounded-md bg-opacity-50 sm:bg-opacity-0 backdrop-filter sm:backdrop-filter-none backdrop-blur-lg sm:backdrop-blur-none">
                 <h1 class="timeline-title text-md lg:text-xl xl:text-3xl">{{ post.title }}</h1>
                 <p class="text-gray-300 text-xs lg:text-sm ">
-                {{ post.body }}
+                {{ truncateText(post.body, 333) }}
                 </p>
               </div>
             </div>
@@ -88,6 +88,14 @@ function changePage(page: number) {
   router.push(`${route.path}?page=${page}`)  // saves current page when reloading 
   if (page >= 1 && page <= totalPages.value) {
     currentPage.value = page;
+  }
+};
+
+function truncateText(text: string, maxLength: number): string {
+  if (text.length > maxLength) {
+    return text.slice(0, maxLength) + "..."; // Если текст длиннее maxLength, обрезаем и добавляем многоточие
+  } else {
+    return text; // Возвращаем текст как есть, если он короче maxLength
   }
 };
 

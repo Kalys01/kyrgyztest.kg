@@ -6,11 +6,9 @@
       <SkeletonLoader class="w-64 h-6 mt-6" />
       <SkeletonLoader class="w-56 h-6 mt-6" />
       <SkeletonLoader class="w-64 h-4 mt-6" />
-      <SkeletonLoader class="w-72 h-2.5 mt-2" />
-      <SkeletonLoader class="w-72 h-2 mt-2" />
-      <SkeletonLoader class="w-72 h-2 mt-2" />
-      <SkeletonLoader class="w-72 h-2 mt-2" />
-      <SkeletonLoader class="w-72 h-2 mt-2" />
+      <div v-for="i in 5">
+        <SkeletonLoader class="w-72 h-2 mt-2" />
+      </div>
     </div>
     <div v-else v-if="isShowResult">
       <h1 class="text-xl font-bold mb-10">{{$t('results.placeholder')}}: <span>{{ 0 }}</span></h1>

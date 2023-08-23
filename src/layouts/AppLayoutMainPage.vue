@@ -1,7 +1,7 @@
 <template>
-  <div class="w-full flex flex-col  min-h-screen bg-white dark:bg-gray-900 dark:text-white transition duration-500">
+  <main class="w-full flex flex-col  min-h-screen bg-white dark:bg-gray-900 dark:text-white transition duration-500">
       <slot />
-  </div>
+  </main>
 </template>
 
 <script lang="ts">

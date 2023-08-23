@@ -1,7 +1,7 @@
 <template>
-  <div class="bg-gray-300 flex flex-col justify-center min-h-screen dark:bg-gray-800">
+  <main class="bg-gray-300 flex flex-col justify-center min-h-screen dark:bg-gray-800">
     <slot />
-  </div>
+  </main>
 </template>
 
 <script lang="ts">

@@ -8,10 +8,10 @@
 </template>
 
 <script lang="ts" setup>
-import TheHeader from "@/components/Header/TheHeader.vue"
-import AppLayout from "@/layouts/AppLayout.vue"
-import TheFooter from '@/components/TheFooter.vue'
-import MobileBottomSticky from '@/components/TheMobileBottomSticky.vue'
+import TheHeader from "@/components/Header/TheHeader.vue";
+import AppLayout from "@/layouts/AppLayout.vue";
+import TheFooter from "@/components/TheFooter.vue";
+import MobileBottomSticky from "@/components/TheMobileBottomSticky.vue";
 
 </script>
 

@@ -78,11 +78,15 @@ export const actions: ActionTree<State, State> & Actions = {
   //   commit(MutationTypes.SET_TRANSLATIONS, translation );
   // },
 
-  async [ActionTypes.FetchPosts]({ commit }) {
+  async [ActionTypes.FetchPosts]({ state, commit }) {
+    const currentLanguage = state.lang;
+    const headers = {
+      'Accept-Language': currentLanguage
+    }
     try {
       commit(MutationTypes.SET_LOADING, true);
       await new Promise((resolve) => setTimeout(resolve, 3000));
-      const responce = await axios.get('https://jsonplaceholder.typicode.com/posts');
+      const responce = await axios.get('https://jsonplaceholder.typicode.com/posts', { headers });
       const posts: News[] = responce.data;
       commit(MutationTypes.SET_POSTS, posts)
     } catch (error) {

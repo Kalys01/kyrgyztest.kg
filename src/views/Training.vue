@@ -10,5 +10,5 @@
 </template>
 
 <script lang="ts" setup>
-import Users from '@/components/Users'
+import Users from '@/components/Users.vue'
 </script>

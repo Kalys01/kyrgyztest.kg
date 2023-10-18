@@ -6,7 +6,7 @@ import { Mutations } from "./mutations";
 import { State } from "./state";
 // import { messages } from './../../locales/index';
 import axios from "axios";
-import News from "@/models/ModelNews";
+import News from "@/models/modelNews";
 
 type ActionAugments = Omit<ActionContext<State, State>, 'commit'> & {
   commit<K extends keyof Mutations>(

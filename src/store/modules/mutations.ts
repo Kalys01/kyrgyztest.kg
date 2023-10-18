@@ -3,7 +3,7 @@ import { MutationTypes } from "./mutation-types";
 import { State } from "./state";
 // import NavUp from "@/models/ModelNavUp";
 // import { Locales } from "@/locales/locales";
-import News from "@/models/ModelNews";
+import News from "@/models/modelNews";
 
 export type Mutations<S = State> = {
   [MutationTypes.SET_THEME](state: S, payload: string): void;

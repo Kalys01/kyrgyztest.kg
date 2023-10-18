@@ -1,6 +1,6 @@
 // import NavUp from "@/models/ModelNavUp";
 import { defaultLocale } from "@/locales";
-import News from "@/models/ModelNews";
+import News from "@/models/modelNews";
 
 export type State = {
   theme: string;

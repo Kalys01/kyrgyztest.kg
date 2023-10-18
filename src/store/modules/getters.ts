@@ -1,7 +1,7 @@
 // import  NavUp  from '@/models/ModelNavUp';
 import { GetterTree } from "vuex";
 import { State } from "./state";
-import News from "@/models/ModelNews";
+import News from "@/models/modelNews";
 
 export type Getters = {
   GET_THEME(state: State): string;

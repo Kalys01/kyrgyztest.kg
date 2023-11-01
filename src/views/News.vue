@@ -4,15 +4,7 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-import TheNews from '@/components/TheNews.vue'
+<script lang="ts" setup>
+import TheNews from "@/components/News/TheNews.vue";
 
-export default defineComponent({
-  components: {
-    TheNews
-  }
-
-})
 </script>
-

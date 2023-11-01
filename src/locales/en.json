@@ -58,6 +58,10 @@
     "subtests": "Subtests",
     "ball": "Ball",
     "time": "Time"
+  },
+
+  "skeleton": {
+    "image": "image"
   }
   
 }

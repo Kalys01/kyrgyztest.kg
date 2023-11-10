@@ -19,14 +19,15 @@
     <NewsImages :images="imgUrls" />
   </div>
 
-  <div v-else class="flex flex-col w-full gap-2 mt-14">
+  <div v-else class="flex flex-col w-full gap-2">
+    <SkeletonLoader class="w-10 h-4 mb-6" />
     <SkeletonLoader class="w-1/2 h-6 mb-6" />
     <div v-for="i in 9">
       <SkeletonLoader class="w-full h-2 mt-2" />
     </div>
     <div class="flex flex-col justify-center items-center w-full gap-3 sm:flex-row">
       <SkeletonLoader class="mt-8 w-full sm:w-1/2 h-48 sm:h-96 flex justify-center items-center text-gray-400">{{$t('skeleton.image')}}</SkeletonLoader>      
-      <SkeletonLoader class="mt-8 w-full sm:w-1/2 h-48 sm:h-96 flex justify-center items-center text-gray-400">{{$t('skeleton.image')}}</SkeletonLoader>      
+      <SkeletonLoader class="mt-8 w-full sm:w-1/2 h-48 sm:h-96 flex justify-center items-center text-gray-400">{{$t('skeleton.image')}}</SkeletonLoader>
     </div>
   </div>
 

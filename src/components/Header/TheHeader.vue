@@ -14,10 +14,10 @@ import TheHeaderUpNav from "@/components/Header/TheHeaderUpNav.vue";
 import TheHeaderNav from "@/components/Header/TheHeaderNav.vue";
 
 const isHeaderHidden = ref(false);
-let prevScrollY = window.pageYOffset;
+let prevScrollY = window.scrollY;
 
 const handleScroll = () => {
-  const currentScrollY = window.pageYOffset;
+  const currentScrollY = window.scrollY;
   isHeaderHidden.value = currentScrollY < prevScrollY && currentScrollY > 700;
   prevScrollY = currentScrollY;
 };

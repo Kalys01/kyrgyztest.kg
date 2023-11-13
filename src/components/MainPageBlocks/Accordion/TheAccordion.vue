@@ -16,7 +16,7 @@
       <Transition>
         <p
           class="text-sm md:text-md text-justify px-1 my-3 font-mono leading-6 text-gray-600"
-          v-if="isOpen"
+          v-show="isOpen"
         >
           <slot></slot>
         </p>

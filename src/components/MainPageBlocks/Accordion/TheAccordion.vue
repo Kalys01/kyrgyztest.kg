@@ -13,12 +13,14 @@
         </div>
       </div>
 
-      <p
-        class="text-sm md:text-md text-justify px-1 my-3 font-mono leading-6 text-gray-600"
-        :class="isOpen ? 'd-block' : 'hidden'"
-      >
-        <slot></slot>
-      </p>
+      <Transition>
+        <p
+          class="text-sm md:text-md text-justify px-1 my-3 font-mono leading-6 text-gray-600"
+          v-if="isOpen"
+        >
+          <slot></slot>
+        </p>
+      </Transition>
     </div>
 </template>
 
@@ -35,3 +37,19 @@ const props = defineProps({
 
 const isOpen = ref(false)
 </script>
+
+<style>
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 1s ease;
+  transform: translateY(0);
+  
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: 0s ease;
+}
+</style>

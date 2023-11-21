@@ -1,5 +1,8 @@
 <template>
-  <nav class="bg-[#673AB7] text-gray-900 mt-[36px] lg:mt-0 hidden xs:block">
+  <nav
+    class="relative w-full top-9 lg:top-0 lg:static bg-[#673AB7] text-gray-900 hidden xs:block ease-in-out transition-all duration-500"
+    :class=" isHeaderHide ? 'translate-y-0' : '-translate-y-full' "  
+  >
     <div class="max-w-7xl mx-auto md:px-3 lg:px-8">
       <div class="relative flex items-center justify-between text-sm font-medium h-16">
         <div class="flex items-center justify-between w-full lg:justify-start">
@@ -39,7 +42,12 @@ import { messages } from '@/locales/index';
 import { useStore } from "@/store";
 
 const store = useStore();
-
+const props = defineProps({
+  isHeaderHide: {
+      type: Boolean,
+      required: true
+    }
+  })
 const lang = ref(localStorage.getItem('lang') || store.state.lang);
 const navs = computed( () => messages[lang.value].navs )
 

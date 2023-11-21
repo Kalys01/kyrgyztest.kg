@@ -1,27 +1,29 @@
 <template>
   <header
-    class="w-full z-50 ease-in-out transition-all duration-500 translate-y-100"
-    :class="{ 'sticky top-9 lg:top-0': isHeaderHidden }"
+    class="w-full z-50 ease-in-out transition-all duration-500 sticky top-0"
+    :class=" isHeaderHidden ? 'lg:translate-y-0' : 'lg:-translate-y-full' "
   >
     <TheHeaderUpNav />
-    <TheHeaderNav />
+    <TheHeaderNav :isHeaderHide = "isHeaderHidden"/>
   </header>
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 import TheHeaderUpNav from "@/components/Header/TheHeaderUpNav.vue";
 import TheHeaderNav from "@/components/Header/TheHeaderNav.vue";
 
-const isHeaderHidden = ref(false);
-let prevScrollY = window.scrollY;
+const isHeaderHidden = ref(true);
+let prevScrollY = 200;
 
 const handleScroll = () => {
   const currentScrollY = window.scrollY;
-  isHeaderHidden.value = currentScrollY < prevScrollY && currentScrollY > 700;
-  prevScrollY = currentScrollY;
+  if (currentScrollY > 100) {
+    isHeaderHidden.value = currentScrollY < prevScrollY;
+    prevScrollY = currentScrollY;
+  }
 };
 
-window.addEventListener('scroll', handleScroll);
+window.addEventListener("scroll", handleScroll);
 
 </script>

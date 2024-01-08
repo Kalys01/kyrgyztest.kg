@@ -60,6 +60,14 @@
     "time": "Time"
   },
 
+  "mainPage": {
+    "welcome" : "Welcome to the Kyrgyz language course!"
+  },
+
+  "сourses": {
+    "title" : "Courses"
+  },
+
   "skeleton": {
     "image": "image"
   }

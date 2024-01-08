@@ -75,8 +75,8 @@ const routes: Array<RouteRecordRaw> = [
     meta: {layout: 'AppLayoutInfo'}
   },
   {
-    path: '/system',
-    name: 'Systems Kyrgyztest',
+    path: '/сourses',
+    name: 'Courses',
     component: () => import('../views/Courses.vue'),
     meta: {layout: 'AppLayoutNews'}
   },

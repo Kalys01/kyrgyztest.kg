@@ -1,10 +1,10 @@
 <template>
   <div class="">
-    <TheNews />
+    <TheProfile />
   </div>
 </template>
 
 <script lang="ts" setup>
-import TheNews from "@/components/News/TheNews.vue";
+import TheProfile from "@/components/Profile/TheProfile.vue";
 
 </script>

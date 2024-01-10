@@ -92,6 +92,12 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('../views/Normative.vue'),
     meta: {layout: 'AppLayoutInfo'}
   },
+  {
+    path: '/profile',
+    name: 'Profile',
+    component: () => import('../views/Profile/Profile.vue'),
+    meta: {layout: 'AppLayoutInfo'}
+  }
 ]
 
 const router = createRouter({

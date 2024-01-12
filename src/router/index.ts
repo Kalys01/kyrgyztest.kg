@@ -96,7 +96,7 @@ const routes: Array<RouteRecordRaw> = [
     path: '/profile',
     name: 'Profile',
     component: () => import('../views/Profile/Profile.vue'),
-    meta: {layout: 'AppLayoutInfo'}
+    meta: {layout: 'AppLayoutProfile'}
   }
 ]
 

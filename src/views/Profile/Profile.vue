@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="flex w-full min-h-screen">
     <TheProfile />
   </div>
 </template>

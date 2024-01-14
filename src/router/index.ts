@@ -96,8 +96,30 @@ const routes: Array<RouteRecordRaw> = [
     path: '/profile',
     name: 'Profile',
     component: () => import('../views/Profile/Profile.vue'),
-    meta: {layout: 'AppLayoutProfile'}
-  }
+    meta: {layout: 'AppLayoutProfile'},
+    children: [
+      {
+        path: 'account',
+        name: 'ProfileAccount',
+        component: () => import('../views/Profile/Profile_Account.vue'),
+      },
+      {
+        path: 'password',
+        name: 'ProfileChangePassword',
+        component: () => import('../views/Profile/Profile_ChangePassword.vue'),
+      },
+      {
+        path: 'subscribtion',
+        name: 'ProfileSubscribtion',
+        component: () => import('../views/Profile/Profile_Subscription.vue'),
+      },
+      {
+        path: 'payment-method',
+        name: 'ProfilePaymentMethod',
+        component: () => import('../views/Profile/Profile_PaymentMethod.vue'),
+      },
+    ],
+  },
 ]
 
 const router = createRouter({

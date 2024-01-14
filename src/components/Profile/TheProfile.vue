@@ -9,13 +9,16 @@
   </section>
   <section class="w-full flex justify-center items-center py-5">
     <ul class="flex flex-col gap-2">
-      <li>Смена пароля</li>
-      <li>Смена пароля</li>
-      <li>Смена пароля</li>
-      <li>Смена пароля</li>
+      <li><router-link to="/profile/account">Account</router-link></li>
+      <li><router-link to="/profile/password">Change password</router-link></li>
+      <li><router-link to="/profile/subscribtion">Subscribtion</router-link></li>
+      <li><router-link to="/profile/payment-method">Payment Method</router-link></li>
     </ul>
   </section>
   </nav>
+  <div class="w-full p-10">
+    <router-view></router-view>
+  </div>
 </template>
 
 <script lang="ts" setup>

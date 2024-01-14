@@ -1,6 +1,6 @@
 <template>
   <div class="flex w-full min-h-screen">
-    Payment Method
+    Account
   </div>
 </template>
 

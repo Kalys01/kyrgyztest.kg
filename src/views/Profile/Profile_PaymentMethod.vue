@@ -1,10 +1,16 @@
 <template>
-  <div class="flex w-full min-h-screen">
-    Payment Method
-  </div>
+  <TheBlockComponent
+    class="bg-opacity-60 backdrop-filter backdrop-blur-lg"
+    :title="$t('profileNavs.title')"
+    :backgroundColor="'bg-gray-900 text-gray-300'"
+    :paddingY="'py-10'"
+    :rounded="'rounded-lg'"
+  >
+    
+  </TheBlockComponent>
 </template>
 
 <script lang="ts" setup>
-import TheProfile from "@/components/Profile/TheProfile.vue";
+import TheBlockComponent from "@/components/ReusedComponents/TheBlockComponent.vue";
 
 </script>

@@ -22,7 +22,7 @@
 </template>
 
 <script lang="ts" setup>
-import TheBlockComponent from "@/components/TheBlockComponent.vue";
-import Attention from '@/components/Attention/Attention'
-import Ads from '@/components/Attention/Ads'
+import TheBlockComponent from "@/components/ReusedComponents/TheBlockComponent.vue";
+// import Attention from '@/components/Attention/Attention'
+// import Ads from '@/components/Attention/Ads'
 </script>

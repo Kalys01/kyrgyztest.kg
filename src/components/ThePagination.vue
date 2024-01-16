@@ -32,7 +32,7 @@
 </template>
 
 <script lang="ts" setup>
-import TheButton from '@/components/UI/TheButton.vue'
+import TheButton from '@/components/ReusedComponents/TheButton.vue'
 import { ref } from 'vue';
 
   const props = defineProps({

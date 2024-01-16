@@ -35,7 +35,7 @@
 
 <script lang="ts" setup>
 import NewsImages from "./NewsImages.vue";
-import SkeletonLoader from "@/components/UI/SkeletonLoader.vue";
+import SkeletonLoader from "@/components/ReusedComponents/SkeletonLoader.vue";
 import { computed, ref } from "vue";
 import { useRoute } from "vue-router";
 import { useStore } from "vuex";

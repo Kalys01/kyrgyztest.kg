@@ -17,7 +17,7 @@
 <script lang="ts" setup>
 import Nav from "@/models/ModelNav";
 import { ref } from "@vue/reactivity";
-import TheBlockComponent from "@/components/TheBlockComponent.vue";
+import TheBlockComponent from "@/components/ReusedComponents/TheBlockComponent.vue";
 
 const normativeActs = ref<Nav[]>([
   {

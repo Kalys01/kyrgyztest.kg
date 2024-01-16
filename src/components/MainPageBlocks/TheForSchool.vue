@@ -30,6 +30,6 @@
 </template>
 
 <script lang="ts" setup>
-import TheBlockComponent from "@/components/TheBlockComponent.vue";
+import TheBlockComponent from "@/components/ReusedComponents/TheBlockComponent.vue";
 
 </script>

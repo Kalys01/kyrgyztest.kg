@@ -39,7 +39,7 @@
 import { computed, reactive, toRefs, ref } from "vue";
 import { SearchIcon } from "@heroicons/vue/outline";
 import SentNumber from "@/components/Results/SentNumber.vue";
-import SkeletonLoader from "@/components/UI/SkeletonLoader.vue";
+import SkeletonLoader from "@/components/ReusedComponents/SkeletonLoader.vue";
 import { useStore } from "vuex";
 
 const store = useStore();

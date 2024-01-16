@@ -53,7 +53,7 @@
 import { computed, ref, onMounted } from "vue";
 import { useRouter, useRoute } from "vue-router";
 import NewsList from "@/components/News/NewsList.vue";
-import SkeletonLoader from "@/components/UI/SkeletonLoader.vue";
+import SkeletonLoader from "@/components/ReusedComponents/SkeletonLoader.vue";
 import { ClockIcon } from "@heroicons/vue/solid";
 import { useStore } from "@/store";
 import { ActionTypes } from "@/store/modules/action-types";

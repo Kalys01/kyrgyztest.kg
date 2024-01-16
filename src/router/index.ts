@@ -109,9 +109,9 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('../views/Profile/Profile_ChangePassword.vue'),
       },
       {
-        path: 'subscribtion',
-        name: 'ProfileSubscribtion',
-        component: () => import('../views/Profile/Profile_Subscription.vue'),
+        path: 'bookmarks',
+        name: 'ProfileBookmarks',
+        component: () => import('../views/Profile/Profile_Bookmarks.vue'),
       },
       {
         path: 'payment-method',

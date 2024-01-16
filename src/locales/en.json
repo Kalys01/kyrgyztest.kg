@@ -70,6 +70,25 @@
 
   "skeleton": {
     "image": "image"
-  }
-  
+  },
+
+  "profileNavs": [
+    {
+    "title": "Account",
+    "to": "/profile/account"
+    },
+    {
+      "title": "Change password",
+      "to": "/profile/password"
+    },
+    {
+      "title": "Bookmarks",
+      "to": "/profile/bookmarks"
+    },
+    {
+      "title": "Payment method",
+      "to": "/profile/payment-method"
+    }
+  ]
+
 }

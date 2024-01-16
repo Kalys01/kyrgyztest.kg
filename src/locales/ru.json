@@ -70,6 +70,25 @@
 
   "skeleton": {
     "image": "картинка"
-  }
+  },
+
+  "profileNavs": [
+    {
+    "title": "Акаунт",
+    "to": "/profile/account"
+    },
+    {
+      "title": "Изменить пароль",
+      "to": "/profile/password"
+    },
+    {
+      "title": "Закладка",
+      "to": "/profile/bookmarks"
+    },
+    {
+      "title": "Способ оплаты",
+      "to": "/profile/payment-method"
+    }
+  ]
   
 }

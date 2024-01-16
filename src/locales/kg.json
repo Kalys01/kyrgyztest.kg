@@ -70,6 +70,25 @@
 
   "skeleton": {
     "image": "сүрөт"
-  }
+  },
+
+  "profileNavs": [
+    {
+    "title": "Акаунт",
+    "to": "/profile/account"
+    },
+    {
+      "title": "Парольду өзгөртүү",
+      "to": "/profile/password"
+    },
+    {
+      "title": "Закладкалар",
+      "to": "/profile/bookmarks"
+    },
+    {
+      "title": "Төлөм жүргүзүү",
+      "to": "/profile/payment-method"
+    }
+  ]
 
 }

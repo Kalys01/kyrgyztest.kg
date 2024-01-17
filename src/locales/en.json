@@ -89,6 +89,12 @@
       "title": "Payment method",
       "to": "/profile/payment-method"
     }
-  ]
+  ],
+  "profileNavsName": {
+    "account" : "Account",
+    "changePassword": "Change password",
+    "bookmarks": "Bookmarks",
+    "paymentMethod": "Payment method"
+  }
 
 }

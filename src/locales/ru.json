@@ -89,6 +89,12 @@
       "title": "Способ оплаты",
       "to": "/profile/payment-method"
     }
-  ]
+  ],
+  "profileNavsName": {
+    "account" : "Акаунт",
+    "changePassword": "Изменить пароль",
+    "bookmarks": "Закладка",
+    "paymentMethod": "Способ оплаты"
+  }
   
 }

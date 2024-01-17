@@ -78,17 +78,23 @@
     "to": "/profile/account"
     },
     {
-      "title": "Парольду өзгөртүү",
+      "title": "Паролду өзгөртүү",
       "to": "/profile/password"
     },
     {
-      "title": "Закладкалар",
+      "title": "Кыстармалар",
       "to": "/profile/bookmarks"
     },
     {
       "title": "Төлөм жүргүзүү",
       "to": "/profile/payment-method"
     }
-  ]
+  ],
+  "profileNavsName": {
+    "account" : "Акаунт",
+    "changePassword": "Паролду өзгөртүү",
+    "bookmarks": "Кыстармалар",
+    "paymentMethod": "Төлөм жүргүзүү"
+  }
 
 }

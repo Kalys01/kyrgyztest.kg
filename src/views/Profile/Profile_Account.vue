@@ -1,7 +1,7 @@
 <template>
   <TheBlockComponent
     class="bg-opacity-60 backdrop-filter backdrop-blur-lg"
-    :title="$t('profileNavs.title')"
+    :title="$t('profileNavsName.account')"
     :backgroundColor="'bg-black text-gray-300'"
     :paddingY="'py-10'"
     :rounded="'rounded-lg'"

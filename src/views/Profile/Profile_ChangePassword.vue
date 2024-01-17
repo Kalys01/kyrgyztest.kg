@@ -1,8 +1,8 @@
 <template>
   <TheBlockComponent
     class="bg-opacity-60 backdrop-filter backdrop-blur-lg"
-    :title="$t('profileNavs.title')"
-    :backgroundColor="'bg-gray-900 text-gray-300'"
+    :title="$t('profileNavsName.changePassword')"
+    :backgroundColor="'bg-black text-gray-300'"
     :paddingY="'py-10'"
     :rounded="'rounded-lg'"
   >

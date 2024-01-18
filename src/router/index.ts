@@ -93,11 +93,17 @@ const routes: Array<RouteRecordRaw> = [
     meta: {layout: 'AppLayoutInfo'}
   },
   {
-    path: '/profile',
+    path: '/profile/',
     name: 'Profile',
     component: () => import('../views/Profile/Profile.vue'),
     meta: {layout: 'AppLayoutProfile'},
+    redirect: '/home',
     children: [
+      {
+        path: '',
+        name: 'ProfileHome',
+        component: () => import('../views/Profile/Profile_Home.vue'),
+      },
       {
         path: 'account',
         name: 'ProfileAccount',

@@ -74,8 +74,12 @@
 
   "profileNavs": [
     {
-    "title": "Account",
-    "to": "/profile/account"
+      "title": "Home",
+      "to": "/profile"
+    },
+    {
+      "title": "Account",
+      "to": "/profile/account"
     },
     {
       "title": "Change password",
@@ -91,6 +95,7 @@
     }
   ],
   "profileNavsName": {
+    "home": "Main",
     "account" : "Account",
     "changePassword": "Change password",
     "bookmarks": "Bookmarks",

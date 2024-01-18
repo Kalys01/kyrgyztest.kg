@@ -74,8 +74,12 @@
 
   "profileNavs": [
     {
-    "title": "Акаунт",
-    "to": "/profile/account"
+      "title": "Башкы",
+      "to": "/profile"
+    },
+    {
+      "title": "Акаунт",
+      "to": "/profile/account"
     },
     {
       "title": "Изменить пароль",
@@ -91,7 +95,8 @@
     }
   ],
   "profileNavsName": {
-    "account" : "Акаунт",
+    "home": "Главная",
+    "account": "Акаунт",
     "changePassword": "Изменить пароль",
     "bookmarks": "Закладка",
     "paymentMethod": "Способ оплаты"

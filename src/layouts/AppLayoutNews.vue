@@ -6,12 +6,9 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script lang="ts" setup>
+import { useLifecycleLogger } from '@/common/hooks/lifecycleLogger';
 
-export default defineComponent({
-  setup() {
-    
-  },
-})
+useLifecycleLogger({ name: "AppLayoutNews" });
+
 </script>

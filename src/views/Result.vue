@@ -4,15 +4,12 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script lang="ts" setup>
 import TheResult from '@/components/Results/TheResult.vue'
+import { useLifecycleLogger } from "@/common/hooks/lifecycleLogger";
 
-export default defineComponent({
-  components: {
-    TheResult
-  }
+  const name = "Result";
+  useLifecycleLogger({ name });
 
-})
 </script>
 

@@ -5,5 +5,7 @@
 </template>
 
 <script lang="ts">
+import { useLifecycleLogger } from '@/common/hooks/lifecycleLogger';
 
+useLifecycleLogger({ name: "AppLayoutMainPage" });
 </script>

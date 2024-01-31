@@ -38,11 +38,10 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script lang="ts" setup>
+import { useLifecycleLogger } from "@/common/hooks/lifecycleLogger";
 
-export default defineComponent({
-
-})
+const name = "Leadership";
+useLifecycleLogger({ name });
 </script>
 

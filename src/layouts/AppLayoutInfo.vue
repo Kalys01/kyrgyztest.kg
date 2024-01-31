@@ -7,5 +7,7 @@
 </template>
 
 <script lang="ts" setup>
+import { useLifecycleLogger } from '@/common/hooks/lifecycleLogger';
 
+useLifecycleLogger({ name: "AppLayoutInfo" });
 </script>

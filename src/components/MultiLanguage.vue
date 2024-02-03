@@ -1,7 +1,7 @@
 <template>
   <div class="flex mx-3 h-full relative text-xs md:text-sm text-gray-300">
     <select
-      class="bg-white bg-opacity-0 outline-none"
+      class="bg-white bg-opacity-0 outline-none cursor-pointer"
       v-model="$i18n.locale"
       @change="updateLanguage($event.target.value)"
     >

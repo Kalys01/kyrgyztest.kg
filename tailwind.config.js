@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   mode: 'jit',
   darkMode: 'class',
@@ -16,7 +18,15 @@ module.exports = {
       'xs': '475px'
     },
     
-    extend: {},
+    extend: {
+      colors: {
+        mainColor: '#673AB7',
+        hoverColor: '#794ac9',
+        darkColor: colors.gray,
+        errorColor: colors.red,
+      },
+    },
+    
   },
   plugins: [],
 }

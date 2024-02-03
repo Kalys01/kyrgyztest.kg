@@ -1,6 +1,6 @@
 <template>
   <h1 class="mb-[100px] text-4xl font-semibold">{{$t('results.title')}}</h1>
-  <div class="flex flex-col justify-center items-center w-full max-w-[800px] px-3 mb-[180px] tracking-wider">
+  <div class="flex flex-col justify-center items-center w-full max-w-[800px] px-1 mb-[180px] tracking-wider">
     <SentNumber v-model="personNumber"/>
     <div v-if="isLoading">
       <SkeletonLoader class="w-64 h-6 mt-6" />
@@ -27,11 +27,9 @@
             <td class="text-center">66</td>
             <td class="text-center">45:34</td>
           </tr>
-          
         </tbody>
       </table>
     </div>
-    
   </div>
 </template>
 

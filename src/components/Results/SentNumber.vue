@@ -3,30 +3,33 @@
     class="flex flex-col justify-center mb-14"
     @submit.prevent="handleSubmit"
   >
-    <div class=" h-10 flex">
-      <input
-        class="outline-none border-r-0 rounded-l-md px-2 border-[1px] border-[#673AB7] dark:bg-gray-800"
-        type="text"
+    <div class="h-10 flex">
+      <v-input
+        :border="'border-r-0'"
+        :rounded="'rounded-l-md'"
+        :type="'text'"
         :placeholder="$t('results.placeholder')"
         :value="modelValue"
         @input="$emit('update:modelValue', $event.target.value)"
         @keydown.enter="handleEnter"
-      >
-      <button
-        class="border-[0px] border-[#673AB7] bg-[#673AB7] hover:bg-purple-700 h-full px-8 rounded-r-md"
+      />
+      <v-button
+        class="rounded-l-none"
         type="submit"
       >
         <SearchIcon class="w-6 h-6 text-gray-300"/>
-      </button>
+      </v-button>
     </div>
   </form>
 </template>
 
 <script lang="ts" setup>
-import { defineProps, ref } from "vue";
+import { defineProps } from "vue";
 import { SearchIcon } from "@heroicons/vue/outline";
 import { ActionTypes } from "@/store/modules/action-types";
 import { useStore } from "vuex";
+import VInput from "@/components/ReusedComponents/VInput.vue";
+import VButton from "@/components/ReusedComponents/VButton.vue";
 
 const store = useStore();
 

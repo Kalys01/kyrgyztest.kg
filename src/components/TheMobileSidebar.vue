@@ -35,8 +35,8 @@
 import { useStore } from "@/store";
 import { MutationTypes } from "@/store/modules/mutation-types";
 import { computed, ref } from "vue";
-import { ChevronLeftIcon } from '@heroicons/vue/outline'
-import { messages } from '@/locales/index'
+import { ChevronLeftIcon } from "@heroicons/vue/outline";
+import { messages } from "@/locales/index";
 
 const store = useStore();
 // const navups = store.getters.GET_NAVUPS;

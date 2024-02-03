@@ -21,11 +21,17 @@
       </div>
 
       <div class="hidden items-center 2xl:flex">Пн-Пт. 9:00 - 17:30</div>
-      <div class="flex mx-5 lg:mx-0">
+      <div class="flex items-center mx-5 lg:mx-0">
         <div class="lg:hidden flex items-center">
           <MultiLanguage />
         </div>
-        <div class="flex items-center right-0 py-1">
+        <router-link
+          class="border-b-0"
+          to="Login"
+        >
+          <v-button>Sign in</v-button>
+        </router-link>
+        <div class="flex items-center ml-2 py-1">
           <TheToggleTheme />
         </div>
       </div>
@@ -45,6 +51,7 @@ import TheMobileButtonHumburger from "@/components/TheMobileButtonHumburger.vue"
 import TheToggleTheme from "@/components/TheToggleTheme.vue";
 import TheMobileSidebar from "@/components/TheMobileSidebar.vue";
 import TheMobileSidebarOverlay from "@/components/TheMobileSidebarOverlay.vue";
+import VButton from "@/components/ReusedComponents/VButton.vue";
 import MultiLanguage from "@/components/MultiLanguage.vue";
 import { computed, onBeforeMount, watch, ref } from "vue";
 import { MutationTypes } from "@/store/modules/mutation-types";

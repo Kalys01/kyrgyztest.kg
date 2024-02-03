@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="relative w-full top-9 lg:top-0 lg:static bg-[#673AB7] text-gray-900 hidden xs:block ease-in-out transition-all duration-500"
+    class="relative w-full top-9 lg:top-0 lg:static bg-mainColor text-gray-900 hidden xs:block ease-in-out transition-all duration-500"
     :class=" isHeaderHide ? 'translate-y-0' : '-translate-y-full' "  
   >
     <div class="max-w-7xl mx-auto md:px-3 lg:px-8">

@@ -1,6 +1,6 @@
 <template>
   <button
-    class="cursor-pointer shadow-xl border border-gray-700 dark:border-gray-300"
+    class="cursor-pointer shadow-md rounded-md hover:text-white hover:bg-hoverColor border-[1px] border-gray-900 dark:border-gray-300 transition-all duration-200"
     :class="[backgroundColor, color, rounded, borderColor, paddingX, paddingY]"
   >{{ title }}
     <slot />
@@ -16,16 +16,17 @@
     color: {
       type: String,
       required: false,
-      default: ''
+      default: 'text-gray-300'
     },
     backgroundColor: {
       type: String,
-      required: false
+      required: false,
+      default: 'bg-mainColor'
     },
     rounded: {
       type: String,
       required: false,
-      default: "rounded-xl"
+      default: ""
     },
     borderColor: {
       type: String,

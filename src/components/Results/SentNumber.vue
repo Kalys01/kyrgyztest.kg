@@ -8,7 +8,7 @@
         :border="'border-r-0'"
         :rounded="'rounded-l-md'"
         :type="'text'"
-        :placeholder="$t('results.placeholder')"
+        :labelName="$t('results.placeholder')"
         :value="modelValue"
         @input="$emit('update:modelValue', $event.target.value)"
         @keydown.enter="handleEnter"

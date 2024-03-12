@@ -1,7 +1,8 @@
 <template>
   <button
-    class="cursor-pointer shadow-md rounded-md hover:text-white hover:bg-hoverColor border-[1px] border-gray-900 dark:border-gray-300 transition-all duration-200"
+    class="cursor-pointer shadow-md rounded-md disabled:cursor-not-allowed disabled:bg-gray-500 hover:text-white hover:bg-hoverColor border-[1px] border-gray-900 dark:border-gray-300 transition-all duration-200"
     :class="[backgroundColor, color, rounded, borderColor, paddingX, paddingY]"
+    :disabled="disabled"
   >{{ title }}
     <slot />
   </button>
@@ -43,5 +44,10 @@
       required: false,
       default: "py-1"
     },
+    disabled: {
+      type: Boolean,
+      required: false,
+      default: false
+    }
   })
 </script>

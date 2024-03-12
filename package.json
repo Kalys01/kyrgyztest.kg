@@ -7,6 +7,7 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@corbado/webcomponent": "^1.0.104",
     "@hennge/vue3-pagination": "^1.0.17",
     "@heroicons/vue": "^1.0.6",
     "@tailwindcss/postcss7-compat": "^2.2.17",
